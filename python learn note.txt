@@ -167,7 +167,8 @@ Fraction('.25')+Fraction('1.25')<=>Fraction('1.5')
 open(r'c:\test','w')<=>open('c:\\test','w')
 
 
-
+print 5.5/2  ==> 2.75
+print 5.5//2 ==> 2.0
 
 
 
