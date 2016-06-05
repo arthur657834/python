@@ -1,6 +1,7 @@
 http://www.ibm.com/developerworks/cn/linux/l-cn-pythondebugger/
 指定编码
 # -*- coding: cp-1252 -*-
+# -*- coding:utf-8 -*- 
 
 标识符
 第一个字符必须是字母表中字母或下划线'_'
@@ -170,9 +171,36 @@ open(r'c:\test','w')<=>open('c:\\test','w')
 print 5.5/2  ==> 2.75
 print 5.5//2 ==> 2.0
 
+DocStrings:
 
+#!/usr/bin/python
+# Filename: func_doc.py
 
+def printMax(x, y):
+    '''Prints the maximum of two numbers.
 
+    The two values must be integers.'''
+    x = int(x) # convert to integers, if possible
+    y = int(y)
+
+    if x > y:
+        print x, 'is maximum'
+    else:
+        print y, 'is maximum'
+
+printMax(3, 5)
+print printMax.__doc__
+
+$ python func_doc.py
+5 is maximum
+Prints the maximum of two numbers.
+
+        The two values must be integers.
+
+赋予doc属性	
+    '''Prints the maximum of two numbers.
+
+    The two values must be integers.'''
 	
 	
 	
