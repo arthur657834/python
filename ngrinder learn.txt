@@ -1,0 +1,38 @@
+https://github.com/naver/ngrinder/releases
+https://github.com/naver/ngrinder/wiki/Installation-Guide
+
+java -XX:MaxPermSize=200m -jar  ngrinder-controller-3.4.war
+
+tomcat:
+	JAVA_OPTS="-Xms600m -Xmx1024m -XX:MaxPermSize=200m" # for catalina.sh 
+
+pip install utils HTTPClient request
+
+vi /etc/security/limits.conf
+
+your_account soft    nproc           32768
+
+your_account hard    nproc           32768
+
+root         soft    nproc           32768
+
+root         hard    nproc           32768
+
+your_account soft    nofile          16000
+
+your_account hard    nofile          16000
+
+root         soft    nofile          16000
+
+root         hard    nofile          16000
+
+打开http://localhost:8080，admin/admin
+右上角admin => download agent
+配置文件:__agent.conf
+启动脚本：run_agent.bat => agent 管理中可查看
+
+chrome 插件录制脚本:Aliyun-PTS-Record-Tool
+
+
+
+
