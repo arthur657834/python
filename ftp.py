@@ -1,44 +1,30 @@
-#-*- coding: utf-8 -*-  
-  
-import ftplib 
-  
-def ftpconnect():
-    ftp_server = '10.1.50.252'  
-    username = 'administrator'  
-    password = 'Broada_123!'  
-    ftp=FTP()  
-    ftp.set_debuglevel(2) #打开调试级别2，显示详细信息  
-    ftp.connect(ftp_server,21) #连接  
-    ftp.login(username,password) #登录，如果匿名登录则用空串代替即可  
-    return ftp  
-      
-def downloadfile():
-    remotepath = "/releases/delivery/cloudone-all-1.0.0.M1-SNAPSHOT.zip";  
-    ftp = ftpconnect()  
-    print ftp.getwelcome() #显示ftp服务器欢迎信息  
-    bufsize = 1024 #设置缓冲块大小  
-    localpath = 'C:\\Users\\lj\\Desktop\\tmp\\cloudone-all-1.0.0.M1-SNAPSHOT.zip'  
-    fp = open(localpath,'wb') #以写模式在本地打开文件  
-    ftp.retrbinary('RETR ' + remotepath,fp.write,bufsize) #接收服务器上文件并写入本地文件  
-    ftp.set_debuglevel(0) #关闭调试  
-    fp.close()  
-    ftp.quit() #退出ftp服务器  
-
-def uploadfile():  
-  
-    remotepath = "/releases/delivery/1.xml"  
-    ftp = ftpconnect()  
-    bufsize = 1024  
-    localpath = 'E:\\1.xml'  
-    fp = open(localpath,'rb')  
-    ftp.storbinary('STOR '+ remotepath ,fp,bufsize) #上传文件  
-    ftp.set_debuglevel(0)  
-    fp.close() #关闭文件  
-    ftp.quit()  
-	
-downloadfile()
-uploadfile()  
-
-
-
-	
+U2FsdGVkX1+BnWMEI3GA/Hb5gz5XiMFPsF3VZbrIAZQdpKpV8Eb2qCqrMXMPRAEk
+v4lO+NhMzk8QwyCnecjMDzYO+1SA4eqhIHYV8s5dHckF08VPFikhYJYHRBqndqHT
+GSnp0Kzne7hbzoRjlFpbI+Ao72wxzddLlT45JVg+GIOFrz2ZN/LIKZDkaQc6+wSn
+JY9vYO1J+0WhjdDVj2ZEXyEqM/LCCtR2cmAnCFG980plFI5UIHRDFHAFrLBbTf6p
+ZEGkq7kxsScaL7EUfoiDQ06RjTxPY6tWLaLOJZB6pyd0FD6Ev7Y+wLVEc4251yWd
+9Abp0I+J9YybRbNqZd9a39dTznF7kzzEbEdeLYZM/VrngfY/ZcbzyjlPicj+oB29
+0Cpa8eYVVAHHKCVs1SAYP3p+NaFNYVNV0dLS2/hYQfbX/Q/ufiKHx7clMsLmp2LU
+b7uer2Y856jyvZgARs+pUiCKW1tyoDgAO7soSYSAO00H99QtFIEsCYeay62Dj2Ig
+B0PFURTUAtGluMirlkhjoLdEL6wxLX4G0icbbnPKw/qFgAiM6qgaCGqQUJFbxytF
+ZfkajIVyB7LatYz5ksFuGpwW5ItFjUZwYT/1wIOV+Aa77LDPHDBAk2CtLWBoq87n
+KsYVaVDu+OWY3+nhGqC+pD18k9AeiHpp+VssSYRXyi0qlVP5iwph0/QNLfO1u0Ax
+QiuauIPTFe5V0Vq7gSRmXOpgdi8Jk/DJT2SrOHxVcXbPl5oRV+ojk5fq3Q+IXr1z
+GgTlSAd1ExP6nGXuRHWYDwCs8J8i8Z9UfILNC590DfhkjLtYzeTGVza7F5fCaTUV
+66pW07Z3EBXmNkS99UkSM8XlfVTMim/KSuXgCxSJsA20z7gcqFR+Xtk05iTL41UW
+2fL5BYojWiMydmUqKYQH8lcmNfm3jTxdN6TU2pNhZqKUgfZKm1TuwWPhfHMFViZj
+FWYxJdottqc2xAQUdFo4Gk3FVWVLCaoPv+T60ZKB6eiganyGvxan2FA4JI+E0GzA
+zidVYE+0oTsoYHmxde4/+SE/jjQpl9ajBAqtYnRrGWyUfcxotR1G61Ak5gXWWk3J
+JS+K+3aPBVaXZoOOelVPcZchdz7bHIjgiZdTWyYWP3zvJPboCqy5L5Ubvq/onT+p
+f9VwPdNaUyJo6RvYNiaXo2XTAm4aqYsD2xIVc9YkPDS9oWqX/zErR7yGTF/TJ8LG
+Gwtz1JOSe2dxf22Bg2uE5qvJOWs+dmXL1VDSnEG/+T5bg1nUrR5tbS48k3YeFhPQ
+tKOZ7Dl0smV+yq6nvc3I47ii8woo+vlbjA26b3d3n2pHnnNbzjJjUUW+MamJzNbs
+NQpVvt6THkoJsvjRjAGWJ0nxjIS3ZK4wz3SuI/4p/YcERdGt3VHow8isACEXZgYw
+zvTquOXsynFhLiyJWTdeLo6lv50h0BWT96qR1Hp3Wn/XCUrwA8lhWGuMbmKLNzv2
+E1LzRdlvOYmK0DVOXo/jJaYWmosNTfdoSCkRJIWUBf7gdABSwbsMvE9vUzK4fiYO
+9KAREUXa7FfyNCD+/tkWBtXSJQNSm7smdEPsgPoZMJY36+zDOXoRZB0fA21LV8Ms
+tptWVHFYxZfQxGVJiQ3owDitwTBcjVzHuPMibn2YcNxWIFFIdwU4GYKDfMq5KeOA
+Ec74SKWUVzUvPjINAGN3YvA46lPOQBnLI9RrtMbIWn6R7lA6nMMrq3ht0LWmrVL1
+VJeR5NigJFcJK9bF+w68cYyvRqP9/E8dZQnLacIiAHr58gMM9zLLKnvFFDUuWcte
+w7qmKeHb9zDCLOC/EwAN/jZAwVL47OEbdup9or2SGNnL1s+mC0+qHKNcVjPpBfHs
+D4hfev6ha/U=

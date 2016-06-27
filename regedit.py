@@ -1,34 +1,19 @@
-import _winreg
-import wmi
-
-key = _winreg.OpenKey(_winreg.HKEY_CURRENT_USER,r"Software\Microsoft\Windows\CurrentVersion\Explorer")
-
-try:
-    i = 0
-    while 1:
-         name, value, type = _winreg.EnumValue(key, i)
-         print repr(name),
-         i +=1
-except WindowsError:
-    print
-    
-print "-------------------"
-
-value, type = _winreg.QueryValueEx(key, "ExplorerStartupTraceRecorded")
-print value, type 
-
-print _winreg.REG_SZ
-
-key = _winreg.OpenKey(_winreg.HKEY_CURRENT_USER,r"Software\Microsoft\Windows\CurrentVersion\Explorer")
-
-newKey = _winreg.CreateKey(key,"MyNewkey")
- 
-_winreg.SetValue(newKey,"ValueName",_winreg.REG_SZ,"ValueContent")
-
-#delete not work
-_winreg.DeleteKey(key, "MyNewkey")
-
-_winreg.DeleteValue(key, "ValueName")
-
-#remore
-key = _winreg.ConnectRegisty("IP地址或者机器名",_winreg.HKEY_CURRENT_USER)
+U2FsdGVkX1+VmYaELNzLdc394tlh1k+RUjE5oHIlM6EvTNKvIEOYcIfwFX+2mQnZ
+S524+uer8WnqyzbOSIxerAnWBeHr7B6gb1vI8X6MEtSiqVe+fCRUZutJJKvD949v
+rWkYMIQAExrPThEXGijtG4ZxfrdGu96GFeqVq2HrBNtfNcwQ3gStJvGKt7FScPw+
++m0ufc5c1dZVbfEYbTRp8iACfryp4OMB+/39xLAqaiPPgYNjbbNb4UT1Bm7LXqfb
+by5h7AsVuTCrgHQ/uxNY0GN+HbjlZjH683cVwAYeci3EXd4DVwqGVWYZ4P1i8Ty6
+DAeYTbsS2irvfFWBXnpXfqA2dBXNXIV5mdo0RvBfpn+WtawgDjWdVvoivr3f3F5S
+0S0WiL/wuZbi7RPir19b5g5qavRc1XmIlIQ7rBRHGe2QnsMDbakASkmq7NkpE+13
+888cyPhrJiXLCIpVa9rp7cledkZ1p/SYuyaeEKWT1OTnMuxSX9N14OpEbE8mVEPO
+ijT+bMuVpXmMHK2rQAYqrQ6LN/o6aJRFJZtppOiKgLAHaaWieckjGB0h+RIibESU
+OoW5JHt7SN/7/gu4eMsP69A1rmTIDqZ1wWZaYF8fOfeDkkmNuSwRkHsHSmovS5ri
+cQZt1dXPaefcmFqImr9eq2rBt0ilLrjv0vE9TwYDv0TPWG8wGfRaB8JHEcL0X8IA
+ahvrI/Vfo0yFLLw82tE79azcxFeqgxB4sCpnhrsUlNZPIROcG8B0HzXqXqJTJgBF
+1drEuvMQsq8wloS/39hdBoaBfQ91uarAwr+UQuIbHFLojcqoYU4jC0FmhtcneTPJ
+UxhpZpHGndr+wo9kP4SohIJKL6yQNLeahHkKG7SMTHXWHsYmCc0TiWFus6QLCjHh
+fvfHQeTMfYkdGtgwrFgWCxL+blzDk/pW3ifxj6a8rXPo/vmvwGvU4mSmAXmAB2hu
+JYr356xoXXYGFZoUO+A0/1/Z/HYlvSC5ZFnkp4IyxiGkeSFjMOBPsivyxaflF5gU
+U7E5COSslLEikkbVPAZDoI2f58iJhaKz7/897oioGR2sLqfkI1Wd7AsgpOFVYl/n
+0Q4IO8EruMYyAXYPSCBdnLoWD3zfPGT4RejAnzgzRqrexlEg+ffrwEFV8HDRzrn8
+Hbpvf49GgR+vBHxzawaX7pXuyn5or/X3

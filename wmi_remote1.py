@@ -1,18 +1,9 @@
-import wmi
-
-# connection = wmi.connect_server(
-#   server="10.1.241.88",
-#   user="administrator",
-#   password="broada@123"
-# )
-# c = wmi.WMI(wmi=connection)
-
-c = wmi.WMI(
-  computer="10.1.241.88",
-  user="administrator",
-  password="broada@123"
-)
-
-print "process list-------------------------"
-for process in c.Win32_Process():
-  print process.ProcessId, process.Name
+U2FsdGVkX1/EuLrYApW29N0rEdNdHFw/VwePgDA3EDk4MziBRCjKWSKTjnhRAhMu
+eITtcg1td5e5Dz4dWSgz5wxgjz7Yol4AfnkDSgCJslP81KRRVPVulVk+wezyAcwt
+OpveOtVsX9IxfVVxn6tXvv8K127mB9cnE/3DMcP37AX2cnuiDJX8UAkb8BTxNbQ+
+Wjwrh1qDOUNzPIzKFOJPbJJiIgEAfVdgoKYwLFKB8DYgB9xuxHfWgsEu7WbW9rAh
+xIC/SV56FAQiqvJfSGJkKx+sHn48mx5+0et0tsh8N4HvhMkwNkNJT+/5TXr4RkBZ
+YD4deru0VpGL+TynkRQGpz91VbVsEL42gTBfqUuyX3fNqHmUbJuu4DzqcjsBO+qC
+GH5UEYnzDNZGM1dl0zQSYc02yU2EZxfWVrR0XZx4LF9GIMyy4wXhHfmhu/NoGgzb
+ng1rczRv66JXQ7RR2o5L3RpG1pjf5Q2Gt+408jduZG8aPDy6zeiJNsB1hJCpIcqO
+5EkAAMC3yRnDHrmBCRaseZ3uOoSbsxfY

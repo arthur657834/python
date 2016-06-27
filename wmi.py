@@ -1,179 +1,109 @@
-#Python wmi Cookbook#
-import wmi
-import time,os,datetime
-import win32api
-import win32con
-
-c=wmi.WMI()
-
-print "process list-------------------------"
-for process in c.Win32_Process():
-  print process.ProcessId, process.Name
-  
-print "create notepad-------------------------"
-process_id, return_value = c.Win32_Process.Create(CommandLine="notepad.exe")
-for process in c.Win32_Process (ProcessId=process_id):
-  print process.ProcessId, process.Name
-
-result = process.Terminate()
-
-#show parameter
-print c.Win32_Process.Create
-
-print "pid list-------------------------"
-for process in c.Win32_Process(name="notepad.exe"):
-  print process.ProcessId, process.Name
-
-print "server not in normal status-------------------------"
-stopped_services = c.Win32_Service(StartMode="Auto", State="Stopped")
-if stopped_services:
-  for s in stopped_services:
-    print s.Caption, "service is not running"
-else:
-  print "No auto services stopped"
-  
-print "disk caption-------------------------"
-for disk in c.Win32_LogicalDisk(DriveType=3):
-  print disk.Caption, "%0.2f%% free" %(100.0 * long(disk.FreeSpace) / long(disk.Size))
-
-print "physical_disk-------------------------"
-  
-for physical_disk in c.Win32_DiskDrive():
-  for partition in physical_disk.associators("Win32_DiskDriveToDiskPartition"):
-    for logical_disk in partition.associators("Win32_LogicalDiskToPartition"):
-      print physical_disk.Caption, partition.Caption, logical_disk.Caption
-      
-print "disk TYPES-------------------------"
-DRIVE_TYPES = {
-  0 : "Unknown",
-  1 : "No Root Directory",
-  2 : "Removable Disk",
-  3 : "Local Disk",
-  4 : "Network Drive",
-  5 : "Compact Disc",
-  6 : "RAM Disk"
-}
-
-
-for drive in c.Win32_LogicalDisk():
-  print drive.Caption, DRIVE_TYPES[drive.DriveType]
-  
-print "open file,wait input,show input -------------------------"
-filename = r"e:\temp.txt"
-process = c.Win32_Process
-process_id, result = process.Create(CommandLine="notepad.exe " + filename)
-watcher = c.watch_for(
-  notification_type="Deletion",
-  wmi_class="Win32_Process",
-  delay_secs=1,
-  ProcessId=process_id
-)
- 
-watcher()
-print "This is what you wrote:"
-print open(filename).read()
-
-
-print "watch print job-------------------------"
-
-# print_job_watcher = c.Win32_PrintJob.watch_for(
-#   notification_type="Creation",
-#   delay_secs=1
-# )
-#  
-# while 1:
-#   pj = print_job_watcher()
-#   print "User %s has submitted %d pages to printer %s" % \
-#     (pj.Owner, pj.TotalPages, pj.Name)
-    
-print "show ip mac address-------------------------"
-
-for interface in c.Win32_NetworkAdapterConfiguration(IPEnabled=1):
-  print interface.Description, interface.MACAddress
-  for ip_address in interface.IPAddress:
-    print ip_address
-  print
-  
-
-
-print "show startup server-------------------------"
-
-for s in c.Win32_StartupCommand():
-  print "[%s] %s <%s>" %(s.Location, s.Caption, s.Command)
-  
-  
-print "watch error log-------------------------"
-# watcher = c.watch_for(
-#   notification_type="Creation",
-#   wmi_class="Win32_NTLogEvent",
-#   Type="error"
-# )
-# while 1:
-#   error = watcher()
-#   print "Error in %s log: %s" %(error.Logfile, error.Message)
-  # send mail to sysadmin etc.
-  
-
-  
-print "show share director-------------------------"
-for share in c.Win32_Share():
-  print share.Name, share.Path
-
-
-print "show print job-------------------------"
-for printer in c.Win32_Printer():
-  print printer.Caption
-  for job in c.Win32_PrintJob(DriverName=printer.DriverName):
-    print "  ", job.Document
-  print
-
-print "software install tip:you hava a right to install-------------------------"
-c.Win32_Product.Install(
-  PackageLocation="E:/Download/mysql-utilities-1.5.6-winx64.msi",
-  AllUsers=False
-)
-
-print "show signature-------------------------"
-for opsys in c.Win32_OperatingSystem ():
-  break
- 
-print opsys.Reboot
-print opsys.Shutdown
-
-for line in os.popen("at"):
-  print line
-
-print "create ScheduledJob-------------------------"
-one_minutes_time = datetime.datetime.now() + datetime.timedelta(minutes=1)
-job_id, result = c.Win32_ScheduledJob.Create(
-  Command=r"cmd.exe /c dir /b c:\ > c:\\temp.txt",
-  StartTime=wmi.from_time(one_minutes_time)
-)
-print job_id
-
-print "create MINIMIZED Process-------------------------"
-SW_SHOWMINIMIZED = 1
-
-startup = c.Win32_ProcessStartup.new(ShowWindow=SW_SHOWMINIMIZED)
-pid, result = c.Win32_Process.Create(
-  CommandLine="notepad.exe",
-  ProcessStartupInformation=startup
-)
-print pid
-
-print "create namespaces-------------------------"
-
-def enumerate_namespaces(namespace=u"root", level=0):
-  print level * "  ", namespace.split("/")[-1]
-  c = wmi.WMI(namespace=namespace)
-  for subnamespace in c.__NAMESPACE():
-    enumerate_namespaces (namespace + "/" + subnamespace.Name, level + 1)
- 
-enumerate_namespaces()
-
-print "desktop.Wallpaper-------------------------"
-full_username = win32api.GetUserNameEx(win32con.NameSamCompatible)
-for desktop in c.Win32_Desktop(Name=full_username):
-  print \
-    desktop.Wallpaper or "[No Wallpaper]", \
-    desktop.WallpaperStretched, desktop.WallpaperTiled
+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
+71GURXojYI8=

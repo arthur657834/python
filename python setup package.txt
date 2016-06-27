@@ -1,93 +1,54 @@
-ex1:
-vi test.py
-print "show me" 
-f = open('demo/testdd.txt', 'r')
-content = f.read()
-f.close()
-print content
-
-vi setup.py
-from distutils.core import setup  
-	setup(
-	name='Myblog',
-	version='1.0',    
-	description='My Blog Distribution Utilities',    
-	author='test',    
-	author_email='test@gmail.com',   . 
-	url='http://test.com',    
-	py_modules=['test'],    #需跟打包的py文件名称一致
-	package_data = {        #包含非py文件
-		'demo':['*.txt']
-	},
-) 
-
-echo recursive-include demo *.txt >>MANIFEST.in   #包含非py文件
-
-打包测试:
-rm -fr dist/*;python setup.py sdist;tar zxvf dist/Myblog-1.0.tar.gz;cd Myblog-1.0/;python setup.py install;python -c "import test"
-
-ex2:
-vi hello.py
-def hello():
-	f = open('testdd.txt', 'r')
-	content = f.read()
-	f.close()
-	print content
-	
-
-vi setup.py
-#coding:utf-8
-import os
-import sys
-
-from setuptools import setup, find_packages
-
-setup(
-    name = "demo",
-    version = "0.0.1",
-    packages = find_packages(),  # packages = ['project_file'],  # 要打包的项目文件夹
-    include_package_data = True, # 自动打包文件夹内所有数据
-	zip_safe=True,               # 设定项目包为安全，不用每次都检测其安全性
-	# 设置程序的入口为hello
-    # 安装后，命令行执行hello相当于调用hello.py中的main方法
-    entry_points = {
-        'console_scripts' : [
-            'demo = demo.hello:hello'
-        ],
-    },
-    package_data = {
-        'demo':['*.txt']
-    },
-    author = "test", 
-    author_email = 'test@email.com',
-    url = "http://test.com",
-    description = 'a demo for setuptools',
-)
-
-打包测试:
-rm -fr dist/*;python setup.py sdist;tar zxvf dist/demo-0.0.1.tar.gz;cd demo-0.0.1/;python setup.py install;python -c "import hello;hello.hello()"
-cd /root/py-packagetest2/;rm -fr demo-0.0.1
-
-
-
-install_requires = [          # 安装依赖的其他包
-    'docutils>=0.3',
-    'requests',
-    ],
-python setup.py --help-commands
---python setup.py build     # 仅编译不安装
---python setup.py install    #安装到python安装目录的lib下
---python setup.py sdist      #生成压缩包(zip/tar.gz)
---python setup.py bdist_wininst  #生成NT平台安装包(.exe)
---python setup.py bdist_rpm #生成rpm包
-
-python setup.py bdist --help-formats
---formats=rpm      RPM distribution
---formats=gztar    gzip'ed tar file
---formats=bztar    bzip2'ed tar file
---formats=ztar     compressed tar file
---formats=tar      tar file
---formats=wininst  Windows executable installer
---formats=zip      ZIP file
-
-python setup.py bdist --formats=zip
+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
+9cwNRpm+Yy+URfXft/k2k9Vev6vjBfnm

@@ -1,26 +1,13 @@
-#!/usr/bin/python
-import difflib
-
-text1 = """text1:
-This module provides classes and functions for comparing sequences.
-including HTML and context and unified diffs.
-difflib document v7.4
-add string
-"""
-
-text1_lines = text1.splitlines()
-
-text2 = """text2:
-This module provides classes and functions for Comparing sequences.
-including HTML and context and unified diffs.
-difflib document v7.5"""
-
-text2_lines = text2.splitlines()
-
-d = difflib.Differ()
-diff = d.compare(text1_lines, text2_lines)
-print '\n'.join(list(diff))
-
-d = difflib.HtmlDiff()
-print d.make_file(text1_lines, text2_lines)
-
+U2FsdGVkX19eBhteM8puE3yqUhQIB0bABm+/hUNr5ODbTBcxaFKg3msOZpnrzJrC
+/sqOWm5tAyq9xsCu1HwhS1CO56YDqM5wRcxvJ2pT+u0FDNxV3l4T/BrnmpWOTbkR
+DYxQOI7GJjH5/DZilX6r7nY7uEroMZ0XRdsQsO9sR5Yagy+egUo34edeoe5mZayb
+rWkUw7YjyO3pz1skG9S//PKeRM5KErd1pkvoSw8HFHWJN5guguJ/HJGvdck8ZrYA
+k2C9vMGJctQVF+TO9ATC9ZeLVAZtkK9FHh3J/89BINbOnUXN/tM5hNNM4OWLPXaU
+D4ETR+7W1hZL0P1THFOsV3rVSrWZIxsdKACk1n8QAZet1cMq4teIKUA4ndHPLbNn
+YEJwqqv3qt51Ss5prW212bXFaEflbWj7pjRy7Oeuqz4fydhEMfo7Apl/7vAfhsgP
+ZmNAxYr7NWNP2BqDyLz4fRZRck9aeSFAP2/k3tOehuEjMWeHfynGf0/RwJT+s0bY
+GPMtBWr34V+ip+p0s3l0ml7gbBFoBRZ8bawDqWUcoeBSLtoyMzJrRysXJelGcOmH
+Fg7abhKw1qXTXMWgoJTq4U5xyWDTB85OFe/oqHEbqb1OusOo8HuUZhUQF4Grcfkw
+jhKozniFtyIIu73VZ7bg9YG5Lq4VQMzxEez1mjR4RVysAUGaPX9VE+edpDCP8Nhl
+PS66oqkPD31prcayf1xC5XhbGD6GX9GZ/b4v6iJLieEvQQ3jruabGefAjhUminHk
+NX960Raw2Ly/3CvmqtefottqL6sjR3iRUW5wMEFsuGM=

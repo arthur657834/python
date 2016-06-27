@@ -1,126 +1,80 @@
-# -*- encoding: gbk -*-
-
-import sys
-import os
-import struct
-import time
-import win32con
-# install pywin32-220.win32-py2.7.exe first
-from win32api import *
-# Try and use XP features, so we get alpha-blending etc.
-try:
-  from winxpgui import *
-except ImportError:
-  from win32gui import *
-
-
-class PyNOTIFYICONDATA:
-  _struct_format = (
-    "I" # DWORD cbSize; 结构大小(字节)
-    "I" # HWND hWnd; 处理消息的窗口的句柄
-    "I" # UINT uID; 唯一的标识符
-    "I" # UINT uFlags;
-    "I" # UINT uCallbackMessage; 处理消息的窗口接收的消息
-    "I" # HICON hIcon; 托盘图标句柄
-    "128s" # TCHAR szTip[128]; 提示文本
-    "I" # DWORD dwState; 托盘图标状态
-    "I" # DWORD dwStateMask; 状态掩码
-    "256s" # TCHAR szInfo[256]; 气泡提示文本
-    "I" # union {
-        #   UINT  uTimeout; 气球提示消失时间(毫秒)
-        #   UINT  uVersion; 版本(0 for V4, 3 for V5)
-        # } DUMMYUNIONNAME;
-    "64s" #    TCHAR szInfoTitle[64]; 气球提示标题
-    "I" # DWORD dwInfoFlags; 气球提示图标
-  )
-  _struct = struct.Struct(_struct_format)
-
-  hWnd = 0
-  uID = 0
-  uFlags = 0
-  uCallbackMessage = 0
-  hIcon = 0
-  szTip = ''
-  dwState = 0
-  dwStateMask = 0
-  szInfo = ''
-  uTimeoutOrVersion = 0
-  szInfoTitle = ''
-  dwInfoFlags = 0
-
-  def pack(self):
-    return self._struct.pack(
-      self._struct.size,
-      self.hWnd,
-      self.uID,
-      self.uFlags,
-      self.uCallbackMessage,
-      self.hIcon,
-      self.szTip,
-      self.dwState,
-      self.dwStateMask,
-      self.szInfo,
-      self.uTimeoutOrVersion,
-      self.szInfoTitle,
-      self.dwInfoFlags
-    )
-
-  def __setattr__(self, name, value):
-    # avoid wrong field names
-    if not hasattr(self, name):
-      raise NameError, name
-    self.__dict__[name] = value
-
-class MainWindow:
-  def __init__(self, title, msg, duration=3):
-    # Register the Window class.
-    wc = WNDCLASS()
-    hinst = wc.hInstance = GetModuleHandle(None)
-    wc.lpszClassName = "PythonTaskbarDemo" # 字符串只要有值即可，下面3处也一样
-    wc.lpfnWndProc = { win32con.WM_DESTROY: self.OnDestroy } # could also specify a wndproc.
-    classAtom = RegisterClass(wc)
-
-    # Create the Window.
-    style = win32con.WS_OVERLAPPED | win32con.WS_SYSMENU
-    self.hwnd = CreateWindow(classAtom, "Taskbar Demo", style,
-      0, 0, win32con.CW_USEDEFAULT, win32con.CW_USEDEFAULT,
-      0, 0, hinst, None
-    )
-    UpdateWindow(self.hwnd)
-    iconPathName = os.path.abspath(os.path.join(sys.prefix, "pyc.ico"))
-    icon_flags = win32con.LR_LOADFROMFILE | win32con.LR_DEFAULTSIZE
-    try:
-      hicon = LoadImage(hinst, iconPathName, win32con.IMAGE_ICON, 0, 0, icon_flags)
-    except:
-      hicon = LoadIcon(0, win32con.IDI_APPLICATION)
-    flags = NIF_ICON | NIF_MESSAGE | NIF_TIP
-    nid = (self.hwnd, 0, flags, win32con.WM_USER + 20, hicon, "Balloon  tooltip demo")
-    Shell_NotifyIcon(NIM_ADD, nid)
-    self.show_balloon(title, msg)
-    time.sleep(duration)
-    DestroyWindow(self.hwnd)
-
-  def show_balloon(self, title, msg):
-    # For this message I can't use the win32gui structure because
-    # it doesn't declare the new, required fields
-    nid = PyNOTIFYICONDATA()
-    nid.hWnd = self.hwnd
-    nid.uFlags = NIF_INFO
-
-    # type of balloon and text are random
-    nid.dwInfoFlags = NIIF_INFO
-    nid.szInfo = msg[:64]
-    nid.szInfoTitle = title[:256]
-
-    # Call the Windows function, not the wrapped one
-    from ctypes import windll
-    Shell_NotifyIcon = windll.shell32.Shell_NotifyIconA
-    Shell_NotifyIcon(NIM_MODIFY, nid.pack())
-
-  def OnDestroy(self, hwnd, msg, wparam, lparam):
-    nid = (self.hwnd, 0)
-    Shell_NotifyIcon(NIM_DELETE, nid)
-    PostQuitMessage(0) # Terminate the app.
-
-if __name__=='__main__':
-  MainWindow("您有一条短消息", "您该睡觉了")
+U2FsdGVkX19vi4Az7SqaTGA0o4n8Rg7ooQBeZPuEy9NWprrw4B6ZUNINsLlkooNy
+Vp09M0PFJzAsR9Qpe/1ccnhJcvx0Jx8TOffkskK1Hq3Np+GMiPQ1sq9pJDf1pl2t
+m6eU/mTA0bD2Fjq7NEAsxCA0rVxzo7ZVjOO9P6O54KO+gBauwgqD+7bWvirkiXfQ
+q5r7YngV73IXewuO1X4Z/LDBs7/NZ3fwIht+GzbWfWJeRgrv+GCyqjSe2RJNeZ+8
+nHX9Af92OlR0A68LxO7vgfiDHlCO0Of0MoLCmqoSaXEXR/xQprge6nBny/4M9vVE
+/GB9HIjKWABP22sZJnx13COEmqApXpEDQN/QWGk2pVnsXfAmbV3VmRv2D5rCEZw5
+VFbZHPVuJA0sBp2ob0o+xSKY9Z4PFh3DO/ZwfioQYKTXhNHAJAhG659dJztH4UUi
+Nd/QEm3YW9WEd5TwkduR2gBZQ2OJcRTL9g9WNINygy2RH5VOhW04agy72slMP46T
+3F34s7tKMhX5RrpuUL8WxBoHwSzylyuxXVqJgeEbJwe4/kWQ+WgSKXNI2ATeiT1N
+FIPoNHBuzO2jm0V0/K69QfWWDUYdEllu7I8NvzbP7JOeSyqiqiJBXHhKdcZVhwVP
+Sl/wbe5codPC++lgG7wAz5Z+hfwQiuKZ+urt1xC6gs0+u44BcV1PYZrX2ON3brfs
+30bFIMFyykLDtatYVdrdYMX88RxC6+p4AqPzHt0DS44htPm7ABcalUB26SZljkSM
+x4xf9LO2HzKF9+j48B+E4vCouTZe/uCfJOdyjsqDPpsvAQ8aMjEoMKLbkAaHHgKR
+sguhYw+KKtBe8pPCHnKCF7AKZ7Wn+z9TNdOrL8pUBQXmta6Q+7G4Kxo2gty8PI+E
+iRM2VsVz9+z3qml1wlF9SCyzbUxIdbUCUHpl+DZbyZ6dMzzTt6rcgrSHIgAjvoL6
+3ij9FowOWJHlqbktoAzh7a4nY3tGFcaZ1DnLIMT1CPUS4zSox8AYVA7P6HWG8L8O
+9xwN6rsR3OAJZWV9azz4Pwmd1TfdBglaaUqEnidc5c9W6eACXs1aQt4BMw64MMjc
+DUZ4yrVfR87qkHDpYgdpIY8Cu491DeeRWE55ttfzDUn1qR/0q0SmGlLdV4lDq0oS
+4XkmiQJR9TLKiIsuZOgRz+Ak5QZYtOaf2cC5WmRIUwvG2fagwkjiquMR3NXetjj2
+jO0E76tGD611UZVOCC4me/zpeftEgr+B1GiGchgsTiGS/PT47/lR8/cL7uYWXDjJ
+37fVQeS7ech3C7tZyYdvz7O+5N/5EOuVJGbHYKayDKND7TfJV3RCqSbIRWF7OjY3
+4YQuXXQz9Tx8jlgzKMIMP3IHmUBS7RAdda3FrgpvwW6wvjbyFueiT97gY3+zbSUc
+2T8EZxMvj8tN7qvF8O0N/YYwX621YJKlqoU7nThnAnsEyZbq8B8O3ZZEpCYDGHhz
+bMktubqKfNJ7CX8+7kp20ly27CY2fDgB34ibKMVPBjM/D0TzIxRfDmEuj7cYvGR8
+0ZGo2tR7ikdDw0jZch1C2pSIMmc6SM/aUInasNqJYmCX01rzNqbxh9V7CRR+Za9y
+wZi+FHbb1mlXmxH7GDZ3PDg8BsJaKdgpgCiCBWEjhxqAY+6Ac/r4RKse74fX86S+
+0EC9uATp8u7lsV5WUJUIP02ck6AAwCPw0m7eIZNStpmeIpG9cskqavm8OhTczo+z
+mOjX++4LgJnAt9+Me1Kw4Eb82xm53DZvzJZB+6sQxknX4yfPcriIj+Gd3D6Dvdt7
+BhKhdR8025zLTaRxe0M78ljBLrua25evq62SxUprGeeIbwl5GZggrQE4TTAzniUv
+vrGYi+wPjw2UZmXHxhxG91/JpKQEKzvfS+Bk1grMv4iDwYOQUBdo6l0WKKQKNuRD
+TVV8QwJXv7Lx2bR2X1KcspR6yL8waCpjIfWzXnk3GWNfA/CcNxrps8Z/y2Bb8NQv
+YFE9fjERN5HvtfGRPhZa5NsoRYd8gy3vi9DYw8hjnbfdqbaKPj65TjegzxAhMlHv
+yE13c7vvWgvo5nEKU98TiEJDLgYnT5S/jidggpr/1pj8xeBvF14pSgZU/a67Zshk
+3Jat7YykIk/FZwW/sRFN0+/oAH1vtnOA8CcTnvB3iW0UD3qCs5HvlcdxzT03Bj0P
+FCzT/CWq12jl2NmnYjnvrUK4ywjYAHeAquA37TcPkbCFtPigsaxWIol2wBmbcn8D
+/jD+xz9kp1sJHF2w6jC1nmPGseGfVbxzruk+O0Rft7OdEsKUUY0XAbC6eEGoQGIU
+Ip2IksWKOTap6cNcMHA2HLQQK2Ijzsj66X3tPyRjgbnfMUl0Mz0Hbf+R3xisUqaP
+cWkIlUvmTQ31IuU1PxAyOhGWTjlEgPq3nLn+ouAEzgruH0Xsfae3tY+rb6dEoht5
+CbRu2xxDACQbxeZ9UpF0R2cPF5nvUGmLO1gdLIED1BDVR7nBcY0JobMeK8EgI6JS
+A1hOfivkQfFc6BVSUY+PoWTZFRN1OFDisrpxJ02kUK1agpk8ob3O7ZHI61Lf8CCX
+PFCPlOpm8iEx+W7Fy2QrBKOLkmdifCCgCthDzQyUObtvIqrAskR5k2y4oCCvWlSQ
+lKJ3h2krwrpLG4SzKJDCIsKO2baGdR6Egvr1Y0Zml2nZ/nx4Bd64fWvOXqY5vo6h
+dQQJ1fr7Xt5duKxx4KDBQI9cQKVteK7+sLMqOivboiX5S6fi5umfYJ/mIBfiCS2x
+0Ab8o0FQFBQ8QP72WWRV2dUuiUL8ewt48fMVyvQ6764J8sLHmQIKk1hli1EzmhPP
+Iar/bpVGWDrLUJNm7DNihNE5MQv88ufSlsAF8/GSRy9QXBFjbbQumoybPCyHgq9K
+yKe0HH4XNgLuDlcXtlSJrZvbKlfSPnoWjP5wGxZixK3Ui7rZzj7WqVygWlNhIJbw
+LpUsL+wyktCVY0nmWC2MdeCy1kp2vkY8m2xmNJ9Vrs1XrngLq02M+cMrONngU58b
+PUrdtqZVP9x+gMHta49/424H8aSs9Z6OLP4byddByi1xoECmtD5eNhlVBquUQ0uS
+oSl6yaBfvXZwDPXhDLzQOW/IH/ZzgV/E6cMTjgK0C54ahI2HyZsfPVzp+Ex9y24a
+NJmoLQNEQBZ2XmVzMB3TLvcchQUdM+mkbwjPIZ0OgYh/idOl4+p0c8XkFstY8U6V
+DcHJbNOVeciL3qh5Bgzj2HPNR25YX3i6Eh75lNhVmMw4I5hZEUPlfkiBon7SxGXT
+VQsCdI+0tByqx10MrBCPfULY3tsIR+AT8LgR9a0ZRPdcwnWXCDuUnPF5nDdd9DJC
+Oe3209uz7BZztfCDJHqEbHfTOuXLrIgl2HuZC/+DfAJerPVPTqJmif+GImaiJYej
+vKycsTHRMIw4SArENRBs74cN+t9w1pCcED5hPsMuPSA2yeEx5ZQiguYjMc9Ee7Jf
+68f10Xk47qqrEkc6EbBXH3PRWqr5dYCEhJ1KxuY0LlQeQRHt3PALmlNuFVgjRgFB
+iCGY1upjhwQgdnjAzIpTrOR910YmaSYb2PPo2VmXMzmzHj298lHt0QQKsxv18j2j
+FtyZfeHXm/8nppA5Mz4GULsiOd8ukVNCm/ByWDTzJ2A/nqconHqX2Vdg/BOg90y4
+FwcjWZO3Ftheochs3lg2xH98euCXwX3qkYl1hT3IgQzSLMoHvB06Amqa4BtFOo10
+cVFlj4sFZ0ojc9Ftfw6934ZA8ejcA/qL+Uux47qJGQ6RcOYwkmEv65r6WzEM+zgG
+5kcYmCDjy8PxsMA4P5jy8pbGZBAfStbSQQizJj3K/DqLT4bC5YbPlBLVBmL5dhXu
+Ohls+Jx8c9okpUmSwUH35EF5zLIoii1PhjM/A1vR3P5NWGaySr7CfUdHDUgAGSEW
+mGB33BZ0KGRz1ywV4XMGpdeRqoHRneBASwQnlNCJRuBTHF2/5wP0conDUuhz01im
+IrXP29we/k98zN5yzDaoG+ceAQWw/7lfjgcnpuEWS4kG40tSVh8hTKfPZCA+aLOA
+8oDWRj27NPZKdBu7jhbqMVkYnjoSXL2c09jxwrBJe14KEvQ9sy9iROx11lwiYGLC
+GddghWJ3iYh5bVMrszqfcYpFw4Cm35CADsUOBIE06J05fn6WDn2zb97cVx77/4wv
+zYp3YEiBhxAA1pWj/rPSnHwCS2c5onqeeErKasqgqGmAQB4jviZ9xDqaxxxr/Km1
+10PRPDYKCJxTsdzPe5DvaIBjPdy7JpV7Xvfubse6BVna1DrSawwM4yJqexlHQa+O
+No1hMYtorPDKoX0+8kO73dz0bDzO1WROIMFu0j79Ef2nUTImNNanGMV/nK0BBG9f
+QRru8DbBcGsPYOJQQdsSWdrqWqsG/GMMUst7BZeaCsMrLNlMhe4GlKW+ShHzPDtX
+j84cIw47Zdse8AV2zMQ4niAOnKH1Mc2Zft04Jw+rEUSUe3u1fdPKkty6mngYKIuu
+jNuUJ4DJNRynqvDv+EVAbKVencesKiF2o5TV4T68DKcgaBURVjC5nPyVE4Mni3Gi
+2pbVPh3YZQzExj2LUTHOU/BK06DdcFzllzn2gtHrn9QHwuLeoEz+sltp72m5QbxN
+J6JrYYCkLA6jkLOmm7NhXHf42LUFkfLhDu/cCWbLojNfPWVrXKcCGWvnMt4LDfrI
+4+P/HkFVphWoayt440lzxRQdTX+UPuXtiGUtrCnk5oOMhzQ8I2eA4UOfeSDYVZ3H
+E8LvbN0lzfNspuSM8mBGyfykqGr1uxXlHUy8DNCEe2h22TXe0MzuTJCcAaKBo02j
+kqwhXmNmBEv6+lotiRj9G2xNzRBRXtStuwI1+T8pAurm+7weTOvhxlrGovbpTbcH
+zSbnOvEo2kFtvYuEasUUMg925de1ueQMyK5DYjcboYULflaQwc/gcpDYD1JU2+Zr
+CcUw4CMQEKs0Fxy9N6ApWwHQzO1BkS6oDJG/9IQHNeGagbzloFVhkVhBt4d0Hu0B
+xvpB2nBvXVj96Y2sd1yOY5KxPOFXF+yAJFha9u2pikcz0wZZJsNZp8Y1GUmZN19W
+dIR7vNCkoi65fhqpV59XTiCcSXhMVKGAAqCkBeXhzrE=

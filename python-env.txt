@@ -1,9 +1,4 @@
-yum -y install python-virtualenv
-virtualenv cfy3.2
-source cfy3.2/bin/activate
-
-which python=> 检测是否成功
-
-cfy --version
-
-
+U2FsdGVkX18LijMEGQYkeFL3QHlh6n18I7fKYCrBSxBhRcZRdeuduljilVHmgmTA
+CIuzPMx8y1N6YUsuErQF6Memqw8NrLNBe+UnXDYHaiQnNm7iJvLXXqZ8J01S1+J3
+512/BGs4mN/gH6vF1jdMNTmuT1hmXplW83b2oJHJi+vZKX3Wz/siNWPXdR6FcvBj
+wb4YaRMhdAY=

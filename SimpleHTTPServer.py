@@ -1,5 +1,5 @@
-# 在某文件夹下创建XXX.py
-# 内容如下
-# 然后运行这个py。默认通过ip:8000可以访问下载py所在文件夹的文件
-import SimpleHTTPServer 
-SimpleHTTPServer.test()
+U2FsdGVkX195yDqy1b6o9+X2zcujV+lcl91O2tuyBX07lIDbRmTkLZH9WktfQzR3
+yJlJosXRi5NNabgVUp2+exmEQdG4o2MkstutIaA+RJo8iVKI66gPJ6PJrpDYP4Be
+KmpsrgfJFxc1vjDkgknd3h13F7XjhBQEF6APmlDNg02mbMk863xWM/IB/nKag/Ou
++CiVwaj58bDA3CrYfLiBOAi2MkIyO6CpSjnjTy7MjhWJ9kGXZmMuIK6d2oqqn+As
+Zhd1T6dyehbA7CmZb/VpRw==

@@ -1,121 +1,99 @@
-#coding=utf8
- 
-import httplib, urllib, urllib2, xml.dom.minidom, os,time
-from cookielib import CookieJar
-
-def printinfo( url, *vartuple ):
-	resp = urllib2.urlopen(url).read();
-	file_object = open('e://1.xml', 'w+')
-	file_object.write(resp)
-	file_object.close( )
-	
-	DOMTree = xml.dom.minidom.parse("e://1.xml")
-	collection = DOMTree.documentElement
-	for var in vartuple:
-		number=DOMTree.getElementsByTagName(var)
-		n1=number[0].firstChild.data
-		return n1;
-	os.remove("e://1.xml")
-
-cj = CookieJar()
-opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
-urllib2.install_opener(opener);
-
-# second time do url request, the cookiejar will auto handle the cookie
-loginBaiduUrl = "http://10.1.3.89:8080/hudson/j_acegi_security_check";
-postData = urllib.urlencode({"j_username": "test", "j_password": "broadatest", "remember_me": "false", "from": "/hudson/"});
-req = urllib2.Request(loginBaiduUrl, postData); # urllib2.Request: the HTTP request will be a POST instead of a GET when the data parameter is provided.
-req.add_header('Content-Type', 'application/x-www-form-urlencoded');
-req.add_header('Cache-Control', 'no-cache');
-req.add_header('Accept', '*/*');
-req.add_header('Connection', 'Keep-Alive');
-resp = urllib2.urlopen(req);
-respInfo = resp.info();		
-
-createUrl = "http://10.1.3.89:8080/hudson/view/All/createItem"
-#jenkins
-#create_postData=urllib.urlencode({"name": "ljtest", "mode": "hudson.maven.MavenModuleSet", "from": ""})
-#hudson
-create_postData=urllib.urlencode({"name": "ljtest", "mode": "hudson.maven.MavenModuleSet$DescriptorImpl", "from": "","json":'{"name": "ljtest", "mode": "hudson.maven.MavenModuleSet$DescriptorImpl", "from": ""}'})
-
-req2 = urllib2.Request(createUrl, create_postData); # urllib2.Request: the HTTP request will be a POST instead of a GET when the data parameter is provided.
-req2.add_header('Content-Type', 'application/x-www-form-urlencoded');
-req2.add_header('Cache-Control', 'no-cache');
-req2.add_header('Accept', '*/*');
-req2.add_header('Connection', 'Keep-Alive');
-resp2 = urllib2.urlopen(req2);
-respInfo2 = resp2.info();		
-print respInfo2
-time.sleep(10)
-
-DeleteUrl = "http://10.1.3.89:8080/hudson/job/ljtest/doDelete";
-post_DeletData = urllib.urlencode({"json":'{}'});
-
-req3 = urllib2.Request(DeleteUrl, post_DeletData); # urllib2.Request: the HTTP request will be a POST instead of a GET when the data parameter is provided.
-req3.add_header('Content-Type', 'application/x-www-form-urlencoded');
-req3.add_header('Cache-Control', 'no-cache');
-req3.add_header('Accept', '*/*');
-req3.add_header('Connection', 'Keep-Alive');
-resp3 = urllib2.urlopen(req3);
-respInfo3 = resp3.info();		
-print respInfo2
-time.sleep(30)
-
-
-old_id=printinfo("http://10.1.3.89:8080/hudson/job/PROD2_appdelivery/lastBuild/api/xml","number")
-old_succ_id=printinfo("http://10.1.3.89:8080/hudson/job/PROD2_appdelivery/lastSuccessfulBuild/api/xml","number")
-old_fail_id=printinfo("http://10.1.3.89:8080/hudson/job/PROD2_appdelivery/lastFailedBuild/api/xml","number")
-print "old_succ_id:",old_succ_id
-print "old_fail_id:",old_fail_id
-
-baiduSpaceEntryUrl = "http://10.1.3.89:8080/hudson/job/PROD2_appdelivery/build";
-resp = urllib2.urlopen(baiduSpaceEntryUrl);
-#x=resp.read()
-#print x;
-time.sleep(120)
-
-while 1: 
-	new_id=printinfo("http://10.1.3.89:8080/hudson/job/kafka/lastBuild/api/xml","number")
-	print "new_id:",new_id
-	if int(new_id) >= int(old_id)+1:
-		status=printinfo( "http://10.1.3.89:8080/hudson/job/PROD2_appdelivery/lastSuccessfulBuild/api/xml","result")
-		if status =="SUCCESS":
-			print "Build SUCCESS"
-			break;
-		elif status =="FAILURE":
-			print "Build FAILURE"
-			break;	
-		else:
-			print "Building..."
-			time.sleep(15)
-	else:
-		print "Building..."
-		time.sleep(15)
-
-#second way		
-'''
-while 1: 
-	new_succ_id=printinfo( "http://10.1.3.89:8080/hudson/job/PROD2_appdelivery/lastSuccessfulBuild/api/xml","number")
-	new_fail_id=printinfo("http://10.1.3.89:8080/hudson/job/PROD2_appdelivery/lastFailedBuild/api/xml","number")
-	print "new_succ_id:",new_succ_id
-	print "new_fail_id:",new_fail_id
-	if int(new_succ_id) >= int(old_succ_id)+1:
-		status=printinfo( "http://10.1.3.89:8080/hudson/job/PROD2_appdelivery/lastSuccessfulBuild/api/xml","result")
-		if status =="SUCCESS":
-			print "Build SUCCESS"
-			break;
-		else:
-			print "Building..."
-			time.sleep(15)
-	elif int(new_fail_id) >= int(old_fail_id)+1:
-		status=printinfo("http://10.1.3.89:8080/hudson/job/PROD2_appdelivery/lastFailedBuild/api/xml","result")
-		if status =="FAILURE":
-			print "Build FAILURE"
-			break;
-		else:
-			print "Building..."
-			time.sleep(15)
-	else:
-		print "Building..."
-		time.sleep(15)	
-'''	
+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

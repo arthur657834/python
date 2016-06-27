@@ -1,28 +1,19 @@
-import IPy  
-IPy.IP('10.0.0.0/8').version()  
-IPy.IP('::1').version() 
-print IPy.IP(0x7f000001) 
-print IPy.IP('127.0.0.1')  
-print IPy.IP('127.0.0.0/255.0.0.0') 
-print IPy.IP('127.0.0.0-127.255.255.255')  
-print IPy.IP('10') 
-print IPy.IP('1080:0:0:0:8:800:200C:417A')  
-print IPy.IP('::1') 
-
-print IPy.IP('10.0.0.0/24').strNormal(0)#0-4 
-
-print IPy.IP('172.29.20.0/24').strNetmask()
-print '127.0.0.1' in IPy.IP('127.0.0.0/24')
-
-print (IPy.IP('192.168.1.1').strHex())
-print (IPy.IP('192.168.1.1').int())
-print (IPy.IP('192.168.1.1').strBin())
-
-print (IPy.IP('192.168.1.0').make_net('255.255.255.0'))
-print IPy.IP('192.168.1.0/255.255.255.0',make_net=True)
-print IPy.IP('192.168.1.0-192.168.1.255',make_net=True)
-
-print IPy.IP('10.0.0.0/22')>IPy.IP('12.0.0.0/22')
-
-print IPy.IP('192.168.0.0/23').overlaps('192.168.1.0')
-print IPy.IP('192.168.0.0/23').overlaps('192.168.1.0/24')
+U2FsdGVkX19ksUwwaCs2lbGmZE0JhEpGfvS4bb53lGUh5+0Z2DmlGZqQHPAbCsJO
+jPB/7pJSZM/8pnLJ8Iq09mj/nrvGfJGscT1O/G5Jik3NyLr+cTG2653/ZaRKkEM3
+c56hDXlWlsKNFRD5XTEH2Rm4mg/U8YPymSCyEnk/pMrxGavr3D8ePyKZvaYV06x+
+Jsdw1R4X1yJU8M64aj1hGPL9Cf5jqsTTJyuPie4SojSx3dlsrBLrupRCCDdBLeK5
+rUZmxat76cYkUh0JNXq7REnbNwNEzDgFv9X1svrE2S6PJiUMbxURnvG8hth6b4bV
+con7FDBmEbviwHxiXgR+aAq4f85BbaKQX+nj7mlkAJjCYVmDWPZB8L4Ozs3JjfuR
+25CvD1sGAbWZA+igsDsU8RL7fi4YSOQ+gH7bdH8/WkI31QTK2pqRKKiqLSYnQ6E7
+3nIoXwqrDKUW+D2mrhzYdfz6R7avE3GAHQOxnWIwwdHygrbB8QW+sWJMlbX7AhVL
+oKfqmKpn9pAmC1KsZB6b3q7W/qrt5AJpyV5GCQKgHNGfMOJWmu50tKCvDzh/ypNI
+mRUXSiadmXJ+6XH2/kbkYWVlawtN4F/lPN+XljJrywLAYWlHaCipUCumumAvV+W8
+2Wk0vt5CNR3GHJ3Rt//IJ60Rkz62pE/jtUP0ewHxNwNT74V4HEPzInZRHqX5+71w
+SflJTKs/UqPV7AM+MAzADvbNQyFkFhXzjT45ksmLx16uJbVW0O0r8fKj18mxtbIX
+xjDBIRjzmMzT8x8oIM8pxLxtVQR8sRB7NhI6d67wbYq3kxRRuI19W9YUw/wzZMHw
+9K6Dd9BkewefmE+eOa3CIfE8fvBwwDpo8e9hCJFZzBOw0l3TMpoOfbl8EF+vq/GX
+HizcwmSMgGCx7rgxyDaLT2kSMv2k46Wfx/w2L3UvHDN4KpMWG1fyLlo8UHlXXJ1g
+CJ5Qor8xTFgk5jxLIVkCmghl7AaNpHLZ8rC9DytGnEtriXyFVCPxFpqmr6TPFqna
+sRm9aMD4Mn1ChzUBOCu7WqyCyreK4CQj0iv/Rrc5hs3DWwZmvPMS1GddfGQ8jE57
+uCOuBPf6I3kAuZfuoWwOKKIR6+T9XtX2L/Ya40ET95DhOpCCcw7uZfzGOWpgRCAH
+HBavvt82ZJS1NSleXpMwsBn28ioempKciVmCaWynKAo=

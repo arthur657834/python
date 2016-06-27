@@ -1,20 +1,15 @@
-import wmi
-import time
-logfile = 'logs_%s.txt' % time.strftime('%Y-%m-%d_%H-%M-%S', time.localtime())
-def call_remote_bat(ipaddress,username,passwd):
-    try:
-        conn = wmi.WMI(computer=ipaddress,user=username,password=passwd)
-        filename=r"C:\1.bat"   
-        cmd_callbat=r"start %s"%filename
-        conn.Win32_Process.Create(CommandLine=cmd_callbat)  
-        print "successful!"
-        return True
-    except Exception,e:
-        log = open(logfile, 'a')
-        log.write(('%s, call bat Failed!\r\n') % ipaddress)
-        log.close()
-        return False
-    return False
-
-if __name__=='__main__':
-    call_remote_bat("10.1.241.88","administrator","broada@123")
+U2FsdGVkX1+luuJotw2/E8jZ1A7kdBtVy5fuw1pq+tqz5lUZk8/VoOQxf2V23Fyi
+nBenLCM99kPXuv1rGvBADlHNWHb7IfKmFpFXISu9FTHzrvqAChDLGgXIp/WSLL6u
+qw0aOnipB/828KEUszlaiuncALiP6K2DNBshdlPp+jP9vQrNqVBToZR7/pE9V6Ff
+SApC+f+KB97yx6R6pJjyVchCaKfRmTARPabp4FN2qt3vWqF/5SGyxOU0qoUsD8mu
+d2No9uvtm5xHMr7kFnwPoXmvYl8eQjdXK54O6co2NAeKJNW3zxZJaznwq8tTO74Q
+NpI9VOnxEK2yWoQmL2TY/auBXgsmYiJPy0vkePxl3dDcSPk16/HLuCNFYtChASix
+9sxAdud8OfdVhn9FDcq98q65lP5ONCvw/YvCFqKJrm+lWrN9lFsm03163ZFXrm8s
+KmH3Ot8xFVYKcQQA0UqJp8X+P9o5rA5cTH4blwVNJk0emZzv4jSSowKI7qdujqNp
+R8tMdyWgro3ehzMzWeAudIUHOS67Rm6bcrZ0Wbq/AxFFgTlChATb6LWkFEjA+10j
+rE7kjX9iEu7+WMf4uI4TBHSi0FCW5bhnGz8ZQY+DU8vIqgR3AqzKiMfvJx+oA5XS
+Xe1jVu0J/wdIbDWUQlMyKCD+jnQof0Ix72PAp6nz0YsRQNoW229lOjEmfFNY3FbK
+mlVBBbz5SESO3fJtAX6zdYv1+9UfVl70+VO2E411ThJ4BrfTClki306qeFbt4BHo
+SfqzQeQVvbqcCHjOnqHFHeJnXHl9Sz7pKi+lqZuf6lnEBuIsDq3yOfzK+KDstzE/
+1Nfy4th4O3yCYDOZbnqotk+4ia/jyF2bFLxlRVsAZHmlCp7q8a9q9ri87Fw833fd
+YMH/IFjrH4GmKz4rL4zp+iovjcQ86Wp1NJVVQ8Ogx/SpaZlCoTGVDpQN/Mp9qF4s

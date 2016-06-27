@@ -1,26 +1,17 @@
-#!/usr/bin/python
-
-import paramiko
-ssh = paramiko.SSHClient()
-ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-ssh.connect("192.168.100.4",22,"root", "12345678")
-stdin, stdout, stderr = ssh.exec_command("ls")
-print stdout.readlines()
-ssh.close()
-
-t = paramiko.Transport(("192.168.100.4",22))
-t.connect(username = "root", password = "12345678")
-sftp = paramiko.SFTPClient.from_transport(t)
-remotepath='/tmp/test.txt'
-localpath='/tmp/yum.log'
-sftp.put(localpath,remotepath)
-t.close()
-
-t = paramiko.Transport(("192.168.100.4",22))
-t.connect(username = "root", password = "12345678")
-sftp = paramiko.SFTPClient.from_transport(t)
-remotepath='/tmp/test.txt'
-localpath='/tmp/test.txt'
-sftp.get(remotepath, localpath)
-t.close()
-
+U2FsdGVkX1/atRqtGpQ8XoLrmEtM0f1FBtP0NdyBzbuKbvNrwNBOWaTKwLU0VO4j
+lL9Z8gQOBcUzySaY29WS8BaxuVicWH0X5Nf1ceJfaHKTzTlaPTfJflVn1uR73GXr
+gTuPzvPDmchFjAvCVZYgYOzfaIIbigY6PflOlvM7PK+fMu6jQP9XinPxaUMxnwBl
+SE4u6YE7KSkyLCA37ht9ayWG+2ezsG3n/kH1aYN5QWZsUpmrpqWvloqQrie65bjL
+yNrA8nA/78kJ5tNqkKSELAb110Lfni8sKGSuwgs9Vhp47IpykDBeKmxU4E5pPTiN
+lM9laPhF/O/pW1+7/897cPua4mPd5xozWw6rkiCde/RQB43JAh6kGGq62K4Ng8L3
+q1GTXwjAY0HLRNMibvOYufAl4hPTxkibDJdkkCbJy1a1Ov/2RtVzDIhWjBzg6swT
+cLh6Wl8Af3Vmo/m0wZM4BTbaA7tSS4NSo8nAGAG0D4qNlRNTWiBwoEWQ4PIwnGws
+p/bMb0gFJhEDeinUBzeAfKnNduPf8eZ3mCdHmVdX9ZH8OI+QCYrWvToomNloit4A
+HzB1J5feIhbQCjFXoWujBYe9i7u4v1SRsCwxMMiAqbKJhqulCgMZRB3ex+Nyss9J
+w0PBzDlUvwkwBAd73D0NqSom4YPMcsqJLbKneScRTnfQlstQueVJwwLQbWxsvE41
+ysLE1nwBVDRtgmIWRMHUl6WtFVqGhCC+oUOI+q3dvIsQPgbCrzAxpCfoO6ivbZ8X
+qVdZYcLwMnLdz4w024NXwqxkehns5/EAxybGVdJQtinrBYHBd5nMujiFIsZSCPrj
+lGY66Tnc7qvMmOx236gDNFc0dcr1nDHLf7yWjBx2mSmmloqK7R3Kq8ghIoRikvx5
+gnhZV/W+7X9b4FshvnmsLmGP7b2NjzivzvzI7QSJ1+uPpFpjBvXW21Hvhhb07mic
+GjjrBcx9EfYpBQnxZ2Aqat0JIFFxoU/1VndkgeUjnCbaJpRB3PE29nLm0nff+wyM
+C9egfxN2kMQ=

@@ -1,33 +1,22 @@
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
-import smtplib
-
-msg = MIMEMultipart()
-
-att1 = MIMEText(open('d:\\test.jks', 'rb').read(), 'base64', 'gb2312')
-att1["Content-Type"] = 'application/octet-stream'
-att1["Content-Disposition"] = 'attachment; filename="123.doc"'
-msg.attach(att1)
-
-att2 = MIMEText(open('d:\\2.jks', 'rb').read(), 'base64', 'gb2312')
-att2["Content-Type"] = 'application/octet-stream'
-att2["Content-Disposition"] = 'attachment; filename="123.txt"'
-msg.attach(att2)
-
-msg1 = MIMEText("123",_subtype='html',_charset='gb2312') 
-msg.attach(msg1)
-
-msg['to'] = '382558987@qq.com'
-msg['from'] = 'kingkom7834@126.com'
-msg['subject'] = 'hello world'
-msg['content'] = 'hello world'
-try:
-    server = smtplib.SMTP()
-    server.connect('smtp.126.com')
-    server.login('kingkom7834','B657834')
-    server.sendmail(msg['from'], msg['to'],msg.as_string())
-    server.quit()
-    print 'succesful'
-except Exception, e:  
-    print str(e)
-	
+U2FsdGVkX19gzTj310MXcKZmZ3Kh+2zladq8BHMf9VFRIcxW+wNbciY0nvte74TY
+3nre5rcZXNJj0qX6s0KZt5z++eIOtYzBXIb7LnrWsYiYz3BRgF9SJSLMyfeOSdjK
+xoA9zxkdVXXvqfLctwDiUKSnZkiqVo2wEB7a/QJAQ7lXMe8H1WXwu08F8JdzsxrA
+gfM/xU77tVfktKJPK1RU8bGBIEYeIAv3dIJQrIgOn5cF/QoYoHuKo2JvYa4lFHcs
+GuoO9WAWAkfOPdzwhihI+LSWruTo9gx7byWzcxzaMjHr2Ma6uyuz9hquubTOFLG4
+7uyk2MdvWR5jiBTi60SmEREejBMZeIs6xRhJ/R9nDKxoz06XNkrUUjwGdr6EsNH3
+tQLky6vUE5U2zQoTsv45w5xBDaDSbPuJGW+mKAhhjPK9bWM9ZWwmQnYdRwxfxDPC
+yi6av6r/clAEBiWPR5K1bc+FksfUCQQeadQiXWIxfXOioX+Jx9VBVoGgo5AbvNfn
+GwFXxZa5Km1oN4qRmTfuzmTlxssMB7QOQM4/RzT49Ld/MUzu/MvUOaQHxjcwfo5+
+Qgr/t6ipON9/z2ezQkGG5gwuN9hDvFOexVFvIppY52m9JSUpEXazSUi8orQCPYBI
+YDmKuknI0T00G7XWcIK9tmkGRwpXoqr6+npYwVWwfV9AiRSRHOiezgB+3Kzwmbbn
+vZZsDeJiVMs20Ie4H52rUEPjdidRMwygtVJ3vLlSATtkR0zFYblBbgv1lacRCfDW
+24AaQnRa0FYUfwAe/ZpujcRFjzAqP6DENWBU0LXmmmLAbV+nZz2rf/G64ZoBui07
+aXbkJ5arLXiAC4/Fmzw6Cs7+yi7D1xQEOer3sMrwBYncqO/2xHr6MDQD5hheeGbW
+0E+3lFlB8eEIfWprLQ4AmsFUVDtSYABrWMkct7ObNWURzr0r/GL3kn0D1g5wvOfF
+mHb45fGNeRkm/p8QuNiMlVh+xYzQ2G0Q9SaQRsy/Q0ZkHe+rKjMB7sJ8RUftN8p2
+QYBlbqMC+UqzHfTov5tZdUTkdmMDKRM5Uc4aa11vo3jD3mmN5btXNdQ0+EyahJoO
+UTwI+5NjHZ4cxA5nESTeUF25Cp78vWadH+ax4VjK1v0TCXdM8GyPRNSHCDbFgwK7
+YfwfidDEkfvkoMXNPn/cazgYMx7cvs/kXEwQ9YtS+ayOkzQdbue88tLnyLpTbDQq
+dG+0MVJzXhzslqP8slH5PrPxq8SuDZgiGc1teo7mOPqnvlNu4vkORhJLmkOu9yO8
+OwvNDOL3T2QYX3G0Z/4yoX5RdTH4NB3O3EDq7ESH0bWwg9cdJHFMFzo1K8SLRuGR
+7xrD20eACfXiG27vNV6dh8rfwPTz/tbx

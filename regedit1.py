@@ -1,13 +1,9 @@
-import _winreg
-# not work
-key = _winreg.OpenKey(_winreg.HKEY_LOCAL_MACHINE,r"Software\Microsoft\Windows")
-newKey = _winreg.CreateKey(key,"MyNewkey")
-'''
-上面的代码的执行不会像预想那样创建如下的键:
-
-"HKEY_LOCAL_MACHINE\Software\Microsoft\Windows"
-
-而是会创建如下的键：
-
-"HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Windows"
-'''
+U2FsdGVkX18j9+iqB1Civk4yUMokZ6OxUBH/rJS08aKuERbCPUI9DAp4QBbtEAVU
+aOl85EW4Kq+jpWKO3Q0NSWrkfzMps57cbYb1RMUJ2AUkAdU6CSnvGG6rh+trXmAC
+e2dyufeXfCUvXJgKHN1JzER42MD/cak9X1r4LHpv5lEuUBU8QmMVhRKC7ymhxWLT
+Lh45Ky89XMdecOuM9yuXlkLpMBZD8mRHtULZSkSamUHbIVlbbFCHnwJGJIAUWE3V
+4diKXOaQsgu0NjtB6mluEUDoC/y70wrEjY7JZGK4a1aAJFoM9fg1lP/sPOT3d4Dt
+KgUSN+siRRgt3uE6bj2knVNcSJ7BKIsJvwVCLp2CTbHeQxkU8MZTEeeAu0EQPvJH
+e2G2Jv8WfEc6ap/udSdKG2tJOpUhBrkA0yo4mmgMd0Ud0muoIw9bj/EjeqofuWeW
+d3MFDRQeT2E35ZBCEruW6QL/UEXsmknmbLNLC3hqn6Mlcj1YVUWYmMST9B00UgDv
+nC88+xfDzQE=

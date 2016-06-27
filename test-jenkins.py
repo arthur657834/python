@@ -1,49 +1,46 @@
-#coding=utf8
- 
-import httplib, urllib, urllib2, xml.dom.minidom, os,time
-from cookielib import CookieJar
-
-def printinfo( url, *vartuple ):
-	resp = urllib2.urlopen(url).read();
-	file_object = open('e://1.xml', 'w+')
-	file_object.write(resp)
-	file_object.close( )
-	
-	DOMTree = xml.dom.minidom.parse("e://1.xml")
-	collection = DOMTree.documentElement
-	for var in vartuple:
-		number=DOMTree.getElementsByTagName(var)
-		n1=number[0].firstChild.data
-		return n1;
-	os.remove("e://1.xml")
-
-cj = CookieJar()
-opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
-urllib2.install_opener(opener);
-
-# second time do url request, the cookiejar will auto handle the cookie
-loginBaiduUrl = "http://10.1.3.89:8080/hudson/j_acegi_security_check";
-postData = urllib.urlencode({"j_username": "test", "j_password": "broadatest", "remember_me": "false", "from": "/hudson/"});
-req = urllib2.Request(loginBaiduUrl, postData); # urllib2.Request: the HTTP request will be a POST instead of a GET when the data parameter is provided.
-req.add_header('Content-Type', 'application/x-www-form-urlencoded');
-req.add_header('Cache-Control', 'no-cache');
-req.add_header('Accept', '*/*');
-req.add_header('Connection', 'Keep-Alive');
-resp = urllib2.urlopen(req);
-respInfo = resp.info();		
-
-createUrl = "http://10.1.3.89:8080/hudson/view/All/createItem"
-#jenkins
-#create_postData=urllib.urlencode({"name": "ljtest", "mode": "hudson.maven.MavenModuleSet", "from": ""})
-#hudson
-create_postData=urllib.urlencode({"name": "ljtest", "mode": "hudson.maven.MavenModuleSet$DescriptorImpl", "from": "","json":'{"name": "ljtest", "mode": "hudson.maven.MavenModuleSet$DescriptorImpl", "from": ""}'})
-									
-req2 = urllib2.Request(createUrl, create_postData); # urllib2.Request: the HTTP request will be a POST instead of a GET when the data parameter is provided.
-req2.add_header('Content-Type', 'application/x-www-form-urlencoded');
-req2.add_header('Cache-Control', 'no-cache');
-req2.add_header('Accept', '*/*');
-req2.add_header('Connection', 'Keep-Alive');
-resp2 = urllib2.urlopen(req2);
-respInfo2 = resp2.info();		
-print respInfo2
-time.sleep(30)
+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
+jDaFF22JN+A3NbGd3HouCqkso7RmxXdy

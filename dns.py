@@ -1,20 +1,10 @@
-import dns.resolver
-
-A=dns.resolver.query("www.qq.com",'A')
-for i in A.response.answer:
-	for j in i.items:
-		print j.address
-		
-MX=dns.resolver.query("126.com",'MX')
-for i in MX:
-	print i.preference,i.exchange
-
-NS=dns.resolver.query("126.com",'NS')	
-for i in NS.response.answer:
-	for j in i.items:
-		print j.to_text()
-
-CNAME=dns.resolver.query("www.qq.com",'CNAME')	
-for i in NS.response.answer:
-	for j in i.items:
-		print j.to_text()
+U2FsdGVkX1+tr3+pHgYp4cod5tbU5kAleSeM7II4+oelUswBBeteN24kMI/ifgZD
+WevWtQezatzIz4zig+VzWO/S4gBYYJBG/h0r4I+SvxCjH2tR9Yb/+op1B1VBnuq2
+GsfrFN5dgo9rSMPzEYat1rdMWBmuUZngDUi1V7Ke/gcSdkkkcccTAs3RX7bvRYE+
+DctDVt0zLB1GaVPutERv17ecc+BWP4YHqwtnprK9jsJgsqdRHjaJGujdQYNqQyQB
+jXJ+QHeQkmzbngHDZzKa2eUmPmiMKSlbacM6/EHkWG8dIvmCXiTlBGH5hSEGU+gm
+5KVFeYZSDB3ZZs13T55I7Kd9Aia6/wguTF1FwdRSo9xutngElZzaFHpp0iofTk5K
+iyZHRKSnYrtguUsPnbrWHc9uCQZAKR7tQA/i7kj7VUnKXi4MdnJNoKfbD1hp7X+p
+Ov+u+ZWzwFHG+/ugV4XDFkDiVg86zBDfIPCJrA/jp8b0Tg66aeZ3TQ3kcZTf/d/L
+p1AC4FDUS2Ca7gay9sSgNj7OJXN3ETktAtz20Tt9Oct55IF+Rl/ekm3XXqiiSmjz
+snF7kkoGFSvCsKRrEBBTEI/yLKquQfhZ

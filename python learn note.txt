@@ -1,206 +1,123 @@
-http://www.ibm.com/developerworks/cn/linux/l-cn-pythondebugger/
-指定编码
-# -*- coding: cp-1252 -*-
-# -*- coding:utf-8 -*- 
-
-标识符
-第一个字符必须是字母表中字母或下划线'_'
-在Python 3中，非-ASCII 标识符也是允许的了。
-
-python保留字
-import keyword
-keyword.kwlist
-
-字符串
-	python中单引号和双引号使用完全相同。
-	使用三引号('''或""")可以指定一个多行字符串。
-	转义符 '\'
-	自然字符串， 通过在字符串前加r或R。 如 r"this is a line with \n" 则\n会显示，并不是换行。
-	python允许处理unicode字符串，加前缀u或U， 如 u"this is an unicode string"。
-	字符串是不可变的。
-	按字面意义级联字符串，如"this " "is " "string"会被自动转换为this is string。
-
-	s = 'Yes,he doesn\'t'
-	print(s, type(s), len(s))
-	print(word[0], word[-5])  word[1:5] word[5:]
-	print('my'*3) =>mymymy
-	print("""\ \的作用是避免在最开始产生一个不需要的空行
-		Usage: thingy [OPTIONS]
-		-h                        Display this usage message
-		-H hostname               Hostname to connect to
-	""")
-
-Numbers
-	a, b, c, d = 20, 5.5, True, 4+3j
-
-List（列表）
-	a = ['him', 25, 100, 'her']
-	a + [6, 7, 8]
-	a[2:5] = []  # 删除
-	cubes.append(216)
-	del a[2:4]
-	
-list.append(x)	把一个元素添加到列表的结尾，相当于 a[len(a):] = [x]。
-list.extend(L)	通过添加指定列表的所有元素来扩充列表，相当于 a[len(a):] = L。
-list.insert(i, x)	在指定位置插入一个元素。第一个参数是准备插入到其前面的那个元素的索引，例如 a.insert(0, x) 会插入到整个列表之前，而 a.insert(len(a), x) 相当于 a.append(x) 。
-list.remove(x)	删除列表中值为 x 的第一个元素。如果没有这样的元素，就会返回一个错误。
-list.pop([i])	从列表的指定位置删除元素，并将其返回。如果没有指定索引，a.pop()返回最后一个元素。元素随即从列表中被删除。（方法中 i 两边的方括号表示这个参数是可选的，而不是要求你输入一对方括号，你会经常在 Python 库参考手册中遇到这样的标记。）
-list.clear()	移除列表中的所有项，等于del a[:]。
-list.index(x)	返回列表中第一个值为 x 的元素的索引。如果没有匹配的元素就会返回一个错误。
-list.count(x)	返回 x 在列表中出现的次数。
-list.sort()	对列表中的元素进行排序。
-list.reverse()	倒排列表中的元素。
-list.copy()	返回列表的浅复制，等于a[:]。
-	
-Tuple（元组）
-	a = (1991, 2014, 'physics', 'math')
-	构造包含0个或1个元素的tuple是个特殊的问题，所以有一些额外的语法规则：
-	tup1 = () # 空元组
-	tup2 = (20,) # 一个元素，需要在元素后添加逗号
-	tup1+tup2
-
-Sets（集合）
-	student = {'Tom', 'Jim', 'Mary', 'Tom', 'Jack', 'Rose'}
-	'Rose' in student  # membership testing（成员测试） =>true
-	a = set('abracadabra')
-	b = set('alacazam')
-	a-b # a和b的差集
-	a | b # a和b的并集
-	a & b     # a和b的交集
-	a ^ b     # a和b中不同时存在的元素
-
-Dictionaries（字典）
-	tel = {'Jack':1557, 'Tom':1320, 'Rose':1886}
-	dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])
-	{x: x**2 for x in (2, 4, 6)}
-	dict(sape=4139, guido=4127, jack=4098)
-	tel['Jack']
-	del tel['Rose']
-	tel['Mary'] = 4127
-	list(tel.keys())
-	sorted(tel.keys()
-	'Mary' not in tel  # 成员测试
-	for k, v in knights.items():
-	
-第一行如下,可像shell 一下执行 ./hello.py
-#! /usr/bin/env python3.4	
-
-round(113.0625, 2)  113.06
-在交互模式中，最后被输出的表达式结果被赋值给变量 _ 
-
-基础：
-age = int(input("Age of the dog: "))
-
-if condition_1:
-    statement_block_1
-elif condition_2:
-    statement_block_2
-else:
-    statement_block_3
-	
-while 判断条件：
-    statements
-	
-for <variable> in <sequence>:
-	<statements>
-else:
-	<statements>
-
-for i in range(0, 10, 3) :
-	print(i)
-
-while True:
-	pass  # 等待键盘中断 (Ctrl+C)
-	
-def return_sum(x,y):
-    c = x + y
-    return c
-
-判断是否为主模块	
-if __name__ == '__main__':
-	print('程序自身在运行')
-
-导入子模块
-import sound.effects.echo
-from sound.effects import echo	
-	
-str() 函数返回一个用户易读的表达形式。
-repr() 产生一个解释器易读的表达形式。
-rjust() 可以将字符串靠右, 并在左边填充空格。<=>ljust() 和 center()
-zfill() 在数字的左边填充 0
-
-str.format()
-ex.   
-print('We are the {} who say "{}!"'.format('knights', 'Ni'))
-print('{0} and {1}'.format('spam', 'eggs'))
-print('This {food} is {adjective}.'.format(food='spam', adjective='absolutely horrible'))
-
-
-reload
-
-exec(open('script.py').read())
-
-random.random()
-random.choice([1,2,3,4])
-random.randint(1,10)
-
-s.find("test")
-s.replace("test","lj")
-s.rstrip()#去除右边的换行符D
-
-'%s ,eggs.and %s' % ('test1','test2')
-'{0} ,eggs.and {1}'.format('test1','test2')
-
-dir(变量名)#输出可用的方法
-help(s.find)
-
-col=[row[1] fro row in M]#M的第二列组成新的的列表
-G=(sum(row) for row in M)
-
-value=d['x'] if 'x' in d else 0;
-
-if type(L)==type([]):
-if type(L)==list:
-if isinstance(L,list):
-
-Fraction('.25')+Fraction('1.25')<=>Fraction('1.5')
-
-open(r'c:\test','w')<=>open('c:\\test','w')
-
-
-print 5.5/2  ==> 2.75
-print 5.5//2 ==> 2.0
-
-DocStrings:
-
-#!/usr/bin/python
-# Filename: func_doc.py
-
-def printMax(x, y):
-    '''Prints the maximum of two numbers.
-
-    The two values must be integers.'''
-    x = int(x) # convert to integers, if possible
-    y = int(y)
-
-    if x > y:
-        print x, 'is maximum'
-    else:
-        print y, 'is maximum'
-
-printMax(3, 5)
-print printMax.__doc__
-
-$ python func_doc.py
-5 is maximum
-Prints the maximum of two numbers.
-
-        The two values must be integers.
-
-赋予doc属性	
-    '''Prints the maximum of two numbers.
-
-    The two values must be integers.'''
-	
-	
-	
+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
+rPhU5gi7ShtqF8nDCHcApw==

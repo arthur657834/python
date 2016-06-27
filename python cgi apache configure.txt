@@ -1,38 +1,16 @@
-设置好CGI目录：
-
-ScriptAlias /cgi-bin/ "F:/web/cgi-bin/"
-
-配置如下：
-
-<Directory "F:/web/cgi-bin">
-    AllowOverride None
-    Options FollowSymLinks +ExecCGI
-    Order allow,deny
-    Allow from all
-</Directory>
-
-添加CGI扩展名：（去掉注释）
-
-AddHandler cgi-script .cgi
-
-http://10.1.51.124/cgi-bin/hello.py
-
-hello.py
-import cgi
-import cgitb;
-#!/usr/bin/python
-# -*- coding: UTF-8 -*-
-
-#import cgi
-#import cgitb;
-#cgitb.enable()
-
-print "Content-type:text/html\r\n\r\n"
-print '<html>'
-print '<head>'
-print '<title>Hello Word - First CGI Program</title>'
-print '</head>'
-print '<body>'
-print '<h2>Hello Word! This is my first CGI program</h2>'
-print '</body>'
-print '</html>'
+U2FsdGVkX1+gqIXE3DJNlk4r1nQ7l/0fncPBDVfwW36Q2LGh0A3eCp9AW+J/16w1
+xR50KMVF+PlAYbrwoLSkm2Wd8b4X25L38Klxv92V+UHSj6N30tWxvA45wtZjh8NM
+RzrIpwlCEKD4LZi72bzEsjTrLV/fRjgWjAHkr54uh+Kch14yspOfTl6w/0GZhhYB
+MDCjImKO348LGSOXNiLOO6I3lXl2Vn04/9IKEPTlhNkuj1I/hBelke7+Bq5eIg8D
+7q8TILm2L8TYBmWNzalLtf76LIuI6e2UJEE/XBuansPEgOWJPk18MIyy3+XR1U7P
+kdthtHuqj86OSEgZTeujO8SH8ItpfyOh/g3fYTWmGkgkLTfASSgkq2fg0pkf3hzt
+B8wZw3A0UQ/hAXOR4SUkLNPk1mP4bbJ1t/gd5sRDeC43xhqRUOmvmPT2BL3Zv+Bh
+JerWwbyucdne46H8wwXBqe71ZtBdVL10i51q+OUAKwduG7fAmuuhruCW8FFZf7cK
+vEKPCDYuAjCKx+LZedTBHWAaAeK0j2OSL4YuQluOyMYHBSz7XBv/IH6jCFwKizs1
+rMupXv5FasMjxxQYmeDM2408wONIvvvb9veJtwl0iPIuJ5Z3dKqT5NVbVf2tnRmm
+8YZw1CZq+Yo711DMpCFp0aD8QVZQDFuravSLEUUfyAIcqPZSgm8OnijXg3/7wrix
+NPsLLVYN59jbhXS1aArYaNeofaCrPodwoDUebxc9MhAfKS1lOyrysSuADTILY5BR
+QYvtkFj3Mu+yBYEDPbj2skHf625p24keDWcoX6ZDKw0nn+aeVGYKQUzSAbmJotG3
+SXsAe/n2nGQr+G4QgQQHwr8fFTm641FM8zQzlluPk7Fdp/RRghva7hQt80YdzOt4
+Lvq1iK2QyzttCnVx96T9swyWq4tQUMLKhn3AserWMFDvIj7Bbb4djFmLj4ArEYN7
+/EiPtS5z7c1HDnvGnw2PxykqvOWBwUqlBRxUpSlFnAw=

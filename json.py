@@ -1,22 +1,13 @@
-import json
- 
-obj = [[1,2,3],123,123.123,'abc',{'key1':(1,2,3),'key2':(4,5,6)}]
-encodedjson = json.dumps(obj)
-print json.dumps(obj,sort_keys=True,indent=4,separators=(',',':'))
-
-print repr(obj)
-print encodedjson
-
-decodejson = json.loads(encodedjson)
-print type(decodejson)
-print "---------------"
-print decodejson[0][0]
-print decodejson[1]
-print decodejson[4]['key1']
-print decodejson
-
-obj1={'key1':(1,2,3),'key2':(4,5,6)}
-decodejson1 = json.loads(json.dumps(obj1))
-print "---------------------"
-print decodejson1
-print decodejson1['key1']
+U2FsdGVkX1/sZ6YqtLx8QG4AOpaLJSpRO5I5u9me3hTUW7Yo71pkMQ84IRU8f+oR
+VQqiEiWfsrEMjOZgfUHDxuPvVUVSMd2B4N7y/T44sk+a/JhS+yHigkEHEN/AdIXU
+493nwEko9C5ObneOv5H09/TA23jxe7CtTzWAvSoxDOdXxNq7lUkaTUMWrQNd4RXm
+GIvd4WImCWpWcCCMfVjr9ovNY/1F8AtzM2C9izh9RuZGf2GY9dxGDqFQY6zPdPNQ
+6Xs1Vfj90t2Wta58arC2wZEVvPjBHRWgyV4RzFCglngC05pYQy036sF5GVqBrDBv
+gE7pPlMTGjFW2T3mi/Jjzaj+qPaUX0vbdeojNNnnnSRml8eMB8j6QIGmxtbhkdIi
+PfbQ2UCsx2F5eINKZNfScYtfkOcnI9rJ/u8oHzIDYe6PHYJMMXdSLCEzQDRHmZ2O
+qIOFHp01rG1EwHK1iuaybjjEHsDXK0a3sGpaV3AQrOd9IxeHsE8F6Ok99sXI8SY4
+7wqiAjVxol2Xq5zfdZCt9ljVx6T37+FNXJNiMqUGDOkY+bP2Bj/K9/kkavb9xRcH
+gevqjMoJ8hK22dJvv5HCKm6JhiA1zr0X/LEWJ+DHaV3FALTOzM0YpEuBdB3qqpAg
++JRnKcGpeq+8akcl8N9wY71QgCnGBRUEZZ1ClI9EOtZAOXTmKmPAJXJRBnUE7cC0
+dX3xlM+Kc8vF+QJTIzAaCu730E/OGN3F4zTio9jxEcMi1sqROZBhZ+WjSI3BBLOb
+ur+/MHe4FI0=
