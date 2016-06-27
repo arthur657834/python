@@ -1,158 +1,59 @@
-<<<<<<< HEAD
-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
-=======
-https://github.com/naver/ngrinder/releases
-https://github.com/naver/ngrinder/wiki/Installation-Guide
-
-java -XX:MaxPermSize=200m -jar  ngrinder-controller-3.4.war
-
-tomcat:
-	JAVA_OPTS="-Xms600m -Xmx1024m -XX:MaxPermSize=200m" # for catalina.sh 
-
-pip install utils HTTPClient request
-
-vi /etc/security/limits.conf
-
-your_account soft    nproc           32768
-
-your_account hard    nproc           32768
-
-root         soft    nproc           32768
-
-root         hard    nproc           32768
-
-your_account soft    nofile          16000
-
-your_account hard    nofile          16000
-
-root         soft    nofile          16000
-
-root         hard    nofile          16000
-
-打开http://localhost:8080，admin/admin
-右上角admin => download agent
-配置文件:__agent.conf
-启动脚本：run_agent.bat => agent 管理中可查看
-
-agent启动连接错误的controlor地址
-	agent 配置文件缓存,具体看启动日志
-	
-chrome 插件录制脚本:
-	Aliyun-PTS-Record-Tool
-	https://github.com/naver/ngrinder/wiki/nGrinder-Recorder-Guide
-		新建脚本：
-			勾选创建资源和库目录,将所需的文件上传到resources下
-
-aliyun插件录制脚本:
-	去掉第一行python解释器路径
-	上传PTS.py至lib文件下
-
-PTS.py:
-# -*- coding:utf-8 -*-
-
-#    created by LiBin 2016-5-31
-
-#   Licensed under the MIT licence:
-#
-#   Permission is hereby granted, free of charge, to any person
-#   obtaining a copy of this software and associated documentation
-#   files (the "Software"), to deal in the Software without
-#   restriction, including without limitation the rights to use,
-#   copy, modify, merge, publish, distribute, sublicense, and/or sell
-#   copies of the Software, and to permit persons to whom the
-#   Software is furnished to do so, subject to the following
-#   conditions:
-#
-#   The above copyright notice and this permission notice shall be
-#   included in all copies or substantial portions of the Software.
-#
-#   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-#   EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
-#   OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-#   NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
-#   HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-#   WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-#   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-#   OTHER DEALINGS IN THE SOFTWARE.
-
-
-def addHttpCode(statuscode, code_list):
-    if statuscode < 300:
-        code_list[0] += 1
-    elif 300 <= statuscode < 400:
-        code_list[1] += 1
-    elif 400 <= statuscode < 500:
-        code_list[2] += 1
-    elif statuscode >= 500:
-        code_list[3] += 1
-
-
-def sumHttpCode(StatusCode, sumStatusCode):
-    for i in xrange(4):
-        sumStatusCode[i] += StatusCode[i]
-
-
-	
-
-
-
-
->>>>>>> 5fdd1b19ef762783054e68acc9005010ebc372ca
+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
