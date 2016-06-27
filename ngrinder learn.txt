@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 U2FsdGVkX19eWdUBvR9GkHImfVX0mSCPBJk659c9DxwovjwYyVspLiixP6Xdp5zF
 IQXDU3tC4gg7p0U7zf2clepvpLxspmxrc15ZRbd3pDx8mZ3+WMld2UK3KGcu1cOw
 vme+OpU0GabkSzuoFAtOsRtRPno2W5n+mWPd3Kj9MK0Kir5heXwnPrshEa7V3PGz
@@ -57,3 +58,101 @@ beOtvPrWcE8BrldDOPnVmgDgXJz7WbnVEIwBM5cM9IsGEgEv/VChay7jCaJxGPuc
 mCjeQuKa7YMWipwr2ljjZzUY/edkYKKFXMRiurViIbTN5DZnehgNCnnyxatEkZeR
 imG2AW7rsjzzYmTFATMIGcHVe0PWN18LTcTMFQVOBHa1kvhfgljwgZcldWtTF40j
 wwn4ksJqlP0KSVxRGvoM7BcDHnp9Nr81p4NhLBDjJv+vXaeS/npoJw==
+=======
+https://github.com/naver/ngrinder/releases
+https://github.com/naver/ngrinder/wiki/Installation-Guide
+
+java -XX:MaxPermSize=200m -jar  ngrinder-controller-3.4.war
+
+tomcat:
+	JAVA_OPTS="-Xms600m -Xmx1024m -XX:MaxPermSize=200m" # for catalina.sh 
+
+pip install utils HTTPClient request
+
+vi /etc/security/limits.conf
+
+your_account soft    nproc           32768
+
+your_account hard    nproc           32768
+
+root         soft    nproc           32768
+
+root         hard    nproc           32768
+
+your_account soft    nofile          16000
+
+your_account hard    nofile          16000
+
+root         soft    nofile          16000
+
+root         hard    nofile          16000
+
+打开http://localhost:8080，admin/admin
+右上角admin => download agent
+配置文件:__agent.conf
+启动脚本：run_agent.bat => agent 管理中可查看
+
+agent启动连接错误的controlor地址
+	agent 配置文件缓存,具体看启动日志
+	
+chrome 插件录制脚本:
+	Aliyun-PTS-Record-Tool
+	https://github.com/naver/ngrinder/wiki/nGrinder-Recorder-Guide
+		新建脚本：
+			勾选创建资源和库目录,将所需的文件上传到resources下
+
+aliyun插件录制脚本:
+	去掉第一行python解释器路径
+	上传PTS.py至lib文件下
+
+PTS.py:
+# -*- coding:utf-8 -*-
+
+#    created by LiBin 2016-5-31
+
+#   Licensed under the MIT licence:
+#
+#   Permission is hereby granted, free of charge, to any person
+#   obtaining a copy of this software and associated documentation
+#   files (the "Software"), to deal in the Software without
+#   restriction, including without limitation the rights to use,
+#   copy, modify, merge, publish, distribute, sublicense, and/or sell
+#   copies of the Software, and to permit persons to whom the
+#   Software is furnished to do so, subject to the following
+#   conditions:
+#
+#   The above copyright notice and this permission notice shall be
+#   included in all copies or substantial portions of the Software.
+#
+#   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+#   EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+#   OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+#   NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+#   HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+#   WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+#   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+#   OTHER DEALINGS IN THE SOFTWARE.
+
+
+def addHttpCode(statuscode, code_list):
+    if statuscode < 300:
+        code_list[0] += 1
+    elif 300 <= statuscode < 400:
+        code_list[1] += 1
+    elif 400 <= statuscode < 500:
+        code_list[2] += 1
+    elif statuscode >= 500:
+        code_list[3] += 1
+
+
+def sumHttpCode(StatusCode, sumStatusCode):
+    for i in xrange(4):
+        sumStatusCode[i] += StatusCode[i]
+
+
+	
+
+
+
+
+>>>>>>> 5fdd1b19ef762783054e68acc9005010ebc372ca
