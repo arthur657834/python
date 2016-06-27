@@ -31,7 +31,65 @@ root         hard    nofile          16000
 配置文件:__agent.conf
 启动脚本：run_agent.bat => agent 管理中可查看
 
-chrome 插件录制脚本:Aliyun-PTS-Record-Tool
+agent启动连接错误的controlor地址
+	agent 配置文件缓存,具体看启动日志
+	
+chrome 插件录制脚本:
+	Aliyun-PTS-Record-Tool
+	https://github.com/naver/ngrinder/wiki/nGrinder-Recorder-Guide
+		新建脚本：
+			勾选创建资源和库目录,将所需的文件上传到resources下
+
+aliyun插件录制脚本:
+	去掉第一行python解释器路径
+	上传PTS.py至lib文件下
+
+PTS.py:
+# -*- coding:utf-8 -*-
+
+#    created by LiBin 2016-5-31
+
+#   Licensed under the MIT licence:
+#
+#   Permission is hereby granted, free of charge, to any person
+#   obtaining a copy of this software and associated documentation
+#   files (the "Software"), to deal in the Software without
+#   restriction, including without limitation the rights to use,
+#   copy, modify, merge, publish, distribute, sublicense, and/or sell
+#   copies of the Software, and to permit persons to whom the
+#   Software is furnished to do so, subject to the following
+#   conditions:
+#
+#   The above copyright notice and this permission notice shall be
+#   included in all copies or substantial portions of the Software.
+#
+#   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+#   EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+#   OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+#   NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+#   HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+#   WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+#   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+#   OTHER DEALINGS IN THE SOFTWARE.
+
+
+def addHttpCode(statuscode, code_list):
+    if statuscode < 300:
+        code_list[0] += 1
+    elif 300 <= statuscode < 400:
+        code_list[1] += 1
+    elif 400 <= statuscode < 500:
+        code_list[2] += 1
+    elif statuscode >= 500:
+        code_list[3] += 1
+
+
+def sumHttpCode(StatusCode, sumStatusCode):
+    for i in xrange(4):
+        sumStatusCode[i] += StatusCode[i]
+
+
+	
 
 
 
