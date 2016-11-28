@@ -1,109 +1,179 @@
-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
-w5TahPeiQN8=
+#Python wmi Cookbook#
+import wmi
+import time,os,datetime
+import win32api
+import win32con
+
+c=wmi.WMI()
+
+print "process list-------------------------"
+for process in c.Win32_Process():
+  print process.ProcessId, process.Name
+  
+print "create notepad-------------------------"
+process_id, return_value = c.Win32_Process.Create(CommandLine="notepad.exe")
+for process in c.Win32_Process (ProcessId=process_id):
+  print process.ProcessId, process.Name
+
+result = process.Terminate()
+
+#show parameter
+print c.Win32_Process.Create
+
+print "pid list-------------------------"
+for process in c.Win32_Process(name="notepad.exe"):
+  print process.ProcessId, process.Name
+
+print "server not in normal status-------------------------"
+stopped_services = c.Win32_Service(StartMode="Auto", State="Stopped")
+if stopped_services:
+  for s in stopped_services:
+    print s.Caption, "service is not running"
+else:
+  print "No auto services stopped"
+  
+print "disk caption-------------------------"
+for disk in c.Win32_LogicalDisk(DriveType=3):
+  print disk.Caption, "%0.2f%% free" %(100.0 * long(disk.FreeSpace) / long(disk.Size))
+
+print "physical_disk-------------------------"
+  
+for physical_disk in c.Win32_DiskDrive():
+  for partition in physical_disk.associators("Win32_DiskDriveToDiskPartition"):
+    for logical_disk in partition.associators("Win32_LogicalDiskToPartition"):
+      print physical_disk.Caption, partition.Caption, logical_disk.Caption
+      
+print "disk TYPES-------------------------"
+DRIVE_TYPES = {
+  0 : "Unknown",
+  1 : "No Root Directory",
+  2 : "Removable Disk",
+  3 : "Local Disk",
+  4 : "Network Drive",
+  5 : "Compact Disc",
+  6 : "RAM Disk"
+}
+
+
+for drive in c.Win32_LogicalDisk():
+  print drive.Caption, DRIVE_TYPES[drive.DriveType]
+  
+print "open file,wait input,show input -------------------------"
+filename = r"e:\temp.txt"
+process = c.Win32_Process
+process_id, result = process.Create(CommandLine="notepad.exe " + filename)
+watcher = c.watch_for(
+  notification_type="Deletion",
+  wmi_class="Win32_Process",
+  delay_secs=1,
+  ProcessId=process_id
+)
+ 
+watcher()
+print "This is what you wrote:"
+print open(filename).read()
+
+
+print "watch print job-------------------------"
+
+# print_job_watcher = c.Win32_PrintJob.watch_for(
+#   notification_type="Creation",
+#   delay_secs=1
+# )
+#  
+# while 1:
+#   pj = print_job_watcher()
+#   print "User %s has submitted %d pages to printer %s" % \
+#     (pj.Owner, pj.TotalPages, pj.Name)
+    
+print "show ip mac address-------------------------"
+
+for interface in c.Win32_NetworkAdapterConfiguration(IPEnabled=1):
+  print interface.Description, interface.MACAddress
+  for ip_address in interface.IPAddress:
+    print ip_address
+  print
+  
+
+
+print "show startup server-------------------------"
+
+for s in c.Win32_StartupCommand():
+  print "[%s] %s <%s>" %(s.Location, s.Caption, s.Command)
+  
+  
+print "watch error log-------------------------"
+# watcher = c.watch_for(
+#   notification_type="Creation",
+#   wmi_class="Win32_NTLogEvent",
+#   Type="error"
+# )
+# while 1:
+#   error = watcher()
+#   print "Error in %s log: %s" %(error.Logfile, error.Message)
+  # send mail to sysadmin etc.
+  
+
+  
+print "show share director-------------------------"
+for share in c.Win32_Share():
+  print share.Name, share.Path
+
+
+print "show print job-------------------------"
+for printer in c.Win32_Printer():
+  print printer.Caption
+  for job in c.Win32_PrintJob(DriverName=printer.DriverName):
+    print "  ", job.Document
+  print
+
+print "software install tip:you hava a right to install-------------------------"
+c.Win32_Product.Install(
+  PackageLocation="E:/Download/mysql-utilities-1.5.6-winx64.msi",
+  AllUsers=False
+)
+
+print "show signature-------------------------"
+for opsys in c.Win32_OperatingSystem ():
+  break
+ 
+print opsys.Reboot
+print opsys.Shutdown
+
+for line in os.popen("at"):
+  print line
+
+print "create ScheduledJob-------------------------"
+one_minutes_time = datetime.datetime.now() + datetime.timedelta(minutes=1)
+job_id, result = c.Win32_ScheduledJob.Create(
+  Command=r"cmd.exe /c dir /b c:\ > c:\\temp.txt",
+  StartTime=wmi.from_time(one_minutes_time)
+)
+print job_id
+
+print "create MINIMIZED Process-------------------------"
+SW_SHOWMINIMIZED = 1
+
+startup = c.Win32_ProcessStartup.new(ShowWindow=SW_SHOWMINIMIZED)
+pid, result = c.Win32_Process.Create(
+  CommandLine="notepad.exe",
+  ProcessStartupInformation=startup
+)
+print pid
+
+print "create namespaces-------------------------"
+
+def enumerate_namespaces(namespace=u"root", level=0):
+  print level * "  ", namespace.split("/")[-1]
+  c = wmi.WMI(namespace=namespace)
+  for subnamespace in c.__NAMESPACE():
+    enumerate_namespaces (namespace + "/" + subnamespace.Name, level + 1)
+ 
+enumerate_namespaces()
+
+print "desktop.Wallpaper-------------------------"
+full_username = win32api.GetUserNameEx(win32con.NameSamCompatible)
+for desktop in c.Win32_Desktop(Name=full_username):
+  print \
+    desktop.Wallpaper or "[No Wallpaper]", \
+    desktop.WallpaperStretched, desktop.WallpaperTiled

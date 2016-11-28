@@ -1,5 +1,5 @@
-U2FsdGVkX18peI1xIpJ1+y+CKrGTUCfnxtw0AiQQGoTYwOP59dJ8Sp6Yuxnp3y4T
-PiVfipXisjkzReKJobAc7ZAO/CrrpTARjl1y1qvfCUqLJmZq65tB5naytvPpdzM8
-821HMVMQMPA+yCJ+6GtZYPXCq/bFV2fv5x5BJ3lo6KWTzWpV/FAnIvzCbwHuX5EC
-CZfoBh6ouhV8VZMQ22Rqpl2YaN99TxFt81dZShLaT7GlaHAgiuytV2yLHlpv5YFu
-45waF57u5tw4WQPXd9hfwA==
+# 在某文件夹下创建XXX.py
+# 内容如下
+# 然后运行这个py。默认通过ip:8000可以访问下载py所在文件夹的文件
+import SimpleHTTPServer 
+SimpleHTTPServer.test()

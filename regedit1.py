@@ -1,9 +1,13 @@
-U2FsdGVkX1/ScJ6t5vyjznU+BkUyUJyErL4oTb7bHzwLAp81dpkv5zhTZ+VxEOQA
-X7t8lgnyRtpVTh3AD3KTZ8+CVdbfB7N9YEifR61XKoDI4Ws3HvUEed51kZLILhQ6
-wLrIkAq41+wZIc89dSkoNrlyf2W/ZPA4iPO/FwzcSFN+jXYvirk+9MzuUuZwilVb
-rmvG2yQTqiTyTR93IPl99H3qkpczsFAdC9nSgxVMdeMrQg7/H/0FPaAYVKbKBxRG
-XGtn9fJKPcEszg1QnYJ3MDu1yiC4iddr1LKPZw4P8y709YlJmB57NX7aog/Xw+OY
-wn1J0y/LVeyH26ve+qBFRrLCaVsC57X6iM8JKy6fY5K2N3rRdxmy0zwZ94PptYjG
-ZmSrWFoB9V3XINaDiGD5Nqkn/UUu7ZyG7OnsRwlyEeFIlNTm2nnWoenpPJiiS37C
-tnfhWnl4Hvf0IHIAw5jl0gh9In08Axi0tu+w9lL/tfydmnkBYGGZYNWZ/gTe2290
-EMCv/sQUbXA=
+import _winreg
+# not work
+key = _winreg.OpenKey(_winreg.HKEY_LOCAL_MACHINE,r"Software\Microsoft\Windows")
+newKey = _winreg.CreateKey(key,"MyNewkey")
+'''
+上面的代码的执行不会像预想那样创建如下的键:
+
+"HKEY_LOCAL_MACHINE\Software\Microsoft\Windows"
+
+而是会创建如下的键：
+
+"HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Windows"
+'''

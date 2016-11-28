@@ -1,30 +1,44 @@
-U2FsdGVkX19OyO77heRJjLd42Nl++5dKA+hPoFH/+T16e9RJDppT0+NJZig7fZ/I
-lX3Wse/KEqdf/SA/zDqsd0KeGbIAV1jnFtrPo2T0wQP+CSRHFxLoBj5lQxGXl/EG
-K2oEjjetsn2vhM2tvvEL04O2cgnPwVAdS7PQnT7tfdNF/Ate1ki4hi6lfUVjq+Qh
-wZI1x+2n1nwsmg+XpVfjClxm/Mnk77jdxfhQa4xJquZKOpg/9n8kH+PFrZAQcmZZ
-FmePP59HV19hraHR3IlKFyEuJ4qrysX3zq+eayt08NJOClRlf5Xok7wOu0U8QTSW
-fUGUKXYNrFhgyPb6O6zELX+uha8MP00DHvkyWJjUI71gElWFeJxUIQ09Ro/iWhFh
-i7PQX4Cw39V93f2g9cA8ADmddn5mPYkvLqpEsbVf7Qb3j/eT17RrkY6ECqU7VdVf
-8zpaUCaEPXMDv6GZGk82W503/y5wD8CmPommawgXNXdYAxXOZfDwJV8xCRkbB9kX
-ogXWn1DPJv2xfzXh+qnfKl658bOOdGX7wlkqUMHgWZwXLXyQGQJBUpkhqp78uRzJ
-LNTjBVyNtWs/FA1wHFouwjdjmceoN+5DA8d99MTHUg4DhPNvNSyck1wTLacMCnJo
-yXPFmmHBh8PhTlTiBw2I4Yyo479kN4ELSIm+HJ20DJLHgt6j4TKGeZkMJq39A9OW
-rndxCw48XvRTH2Hsr4l9Lz/BR21lVODoxrrTk1N1KXT97MgvAIFzYu15qQpMwpQF
-BGCPICXBcqsJtFT5G/RkPrWogEK/XrKEWa/R6ND7Yicxb+oYMFLmnn7c0CxsEzez
-bb5BFV8ztfKGtPmzylk8cErbrpUOZvxuGeZp3wG/C8/HzalOO0iOlcv0FCM2jLgT
-oFW54UyXSr9U9uoiT7NtU5QV61yNPAHOQwZujpzZqMs5GhVs9afgaGd/LXnTmFDJ
-hhtzfqFiI5MvVCHZlhIR3BDWh+StN/1QpzIoxrt+SoT2dN9pbGONHw+0OFD8rJuX
-4uaMXlEHl1k7HoCUpNZ4OmBgWm74nb4LT4am8NdqmlPsGsnqRW84HXrAkSA83t/r
-CTxM6i0ROHiq8GhUcWx/f6TKBYNHQKRBhnuJ8XdlXNsFK4qQo2M7fFwCTKIXuQ3x
-JzAW901sRqir5irwbeSKISPZRlDonyZZCer6ivkb5EyJP2DHPPV87QSJwJ6unmQw
-2701HlL8VZV6h0s4RdD6CkoGGUphaj451Y92YockJJfkv00Dyis4j05OvLx4L4gn
-4bBxJdC3WFytEkeiQ0CuDvg33DLm6WqrRnQOAveU/zRnnrDm+Ap0zFPHbxKN8Di3
-CeSbRUxoNywd2GXGk1te7ApeUfsMF5vajrT3QYkPYJ14/T8zZeRR414xD+SXfHlX
-AN09ov4rmCfNJHwPr6prenFQuJuqLwOzop5LenyVzN2fTJd5LplUDqMTfpDi2hsw
-P3r/1FzdJR4MZTPVUGrUcZJl1i0AZFCzuXxOzsN5kvIpI+4IAnPmuyrJnpkrBM9Y
-PaGWml5P8o+J0brzRyid4C3iY5yM+Fn1F5W42n901Gy2tdlg8Gj53psWgsZRW7bE
-3NH3+CXvyyPMhXsZsFEOX3Hkcy4VxsvHZcqpI2zuuGORgNoUmlaVEm4Q4FZxDwKQ
-yoLGxgfpd6CFlqX4ERsESLimfCaXvyD6uU7elID65dDZ93MAP8f2Iavb5XeoJYFm
-VBp78BWV5328rKf11wis45FFDTns416qYOMpw4eR5YCTj3mp9Pvlep3lLMFcezbh
-jDdFvVwod27cZgNUMPlRN9Y0A+Mph55pZ5zcoMbkwtXFV/YJfUD1eL2yslH7JF04
-ax/r4DL43SA=
+#-*- coding: utf-8 -*-  
+  
+import ftplib 
+  
+def ftpconnect():
+    ftp_server = '10.1.50.252'  
+    username = 'administrator'  
+    password = 'Broada_123!'  
+    ftp=FTP()  
+    ftp.set_debuglevel(2) #打开调试级别2，显示详细信息  
+    ftp.connect(ftp_server,21) #连接  
+    ftp.login(username,password) #登录，如果匿名登录则用空串代替即可  
+    return ftp  
+      
+def downloadfile():
+    remotepath = "/releases/delivery/cloudone-all-1.0.0.M1-SNAPSHOT.zip";  
+    ftp = ftpconnect()  
+    print ftp.getwelcome() #显示ftp服务器欢迎信息  
+    bufsize = 1024 #设置缓冲块大小  
+    localpath = 'C:\\Users\\lj\\Desktop\\tmp\\cloudone-all-1.0.0.M1-SNAPSHOT.zip'  
+    fp = open(localpath,'wb') #以写模式在本地打开文件  
+    ftp.retrbinary('RETR ' + remotepath,fp.write,bufsize) #接收服务器上文件并写入本地文件  
+    ftp.set_debuglevel(0) #关闭调试  
+    fp.close()  
+    ftp.quit() #退出ftp服务器  
+
+def uploadfile():  
+  
+    remotepath = "/releases/delivery/1.xml"  
+    ftp = ftpconnect()  
+    bufsize = 1024  
+    localpath = 'E:\\1.xml'  
+    fp = open(localpath,'rb')  
+    ftp.storbinary('STOR '+ remotepath ,fp,bufsize) #上传文件  
+    ftp.set_debuglevel(0)  
+    fp.close() #关闭文件  
+    ftp.quit()  
+	
+downloadfile()
+uploadfile()  
+
+
+
+	

@@ -1,13 +1,22 @@
-U2FsdGVkX1/dWNm/7EBF7Ssp6c82iCtHpc09LFMC6i56NB7YpYHonZa6EgXNx+OV
-9p09JWXWMXFE0Lpm8x6Ypw0M1C6kZn1bJIM89f1IVcF5f9wLMF4lTV/lQsobEflQ
-QWSiP5v+gprqDgOYXpxmupFGD95JWehLJu+IEIcLSx1FfNax62m/VjG1UQv1KKVV
-60cNuuD22be8ZjS7h86Kno9Ad1T0FBDr6DHGZqq0Ak1XSmpjO1bMGMrCg331inGi
-cnVGBQVwuTBCoAL+2WfnYAFpiizxnJ7K0iXKJWKhlrM/FwlvO78Qw4IO+rLRuthI
-fwDJcClttG+pJgSsFDp2qTnoOwVPxWsYeRWYIBonxWZn9TFTT+O2TEVzUU7MaxiS
-aYRtSmQQIw5PBpEs/AP4RsKJha9WY5wrrMkHfF/dZ3PWAnYQsGJr2bbab25Apc7I
-foK378nWzD32NXCSBqyTVa76j+X9s9zL5DZdXrDtzHUuMuxe1Hkqb1UVKK34kp9t
-46+/z/o4oBRdbf6jpDPMCMUfI2/Z5idvSZtfhlCjFlKfB3666Fq55an1RyqsCzO5
-gDuNixae1yzpuM5xou4HvK4vRorLn9ZtYAlJQr6AxG7zYW7y+3d/3ZS1EBcwbmar
-D2slO04N+JTQhZd3QjW7YEVxi9/GvogERm222vHM7+WKGpw9o+Pfa6gg3h/8cRYf
-TpbblLdsXOrYnKKhB6x1vKYAh9czQ20Oze5pRK87stQCn09q6oM1DfgOLDDgAD+w
-to0vmC+nWOg=
+import json
+ 
+obj = [[1,2,3],123,123.123,'abc',{'key1':(1,2,3),'key2':(4,5,6)}]
+encodedjson = json.dumps(obj)
+print json.dumps(obj,sort_keys=True,indent=4,separators=(',',':'))
+
+print repr(obj)
+print encodedjson
+
+decodejson = json.loads(encodedjson)
+print type(decodejson)
+print "---------------"
+print decodejson[0][0]
+print decodejson[1]
+print decodejson[4]['key1']
+print decodejson
+
+obj1={'key1':(1,2,3),'key2':(4,5,6)}
+decodejson1 = json.loads(json.dumps(obj1))
+print "---------------------"
+print decodejson1
+print decodejson1['key1']

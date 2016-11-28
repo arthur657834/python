@@ -1,14 +1,33 @@
-U2FsdGVkX1+5O+gfG5mKmixkHI3peyB7YqZY+ZIJYw75CtlKgdb+m2/VCXWUkEbe
-zMNBYt5VaXHzJIQZ7CCl25ZUhncW8YtIkmL4H1RENBclbAMp9zzLw3WeMmKGGCnh
-pSUzp2L1U4SCxX2hlnpfV8D3kCp4MpHl7fgBZsCujKb+lQkXE6jMbZ4t+CjzuPFV
-J8CwNeuYYtGTrJb3iyLnFWn21x5lL+hcDrU4D4UgkfcfuXJcQIhA3t/1iC2AcoSr
-Z5199qHhnvHv9KqX28N4pIiWDA7x6IkjLLqjAyhuHevhd+rpl6Nx7MYJMJLGjMTv
-R/+81yKwyFpYRRip7YlKcT8WdRIL8kOC20Namc2mN2LevjStAdG7Dz+AwBj56sK4
-Mbs7FQxhddiMXkKLf2ctaRkMCWdMeTQvyplH7iDgXJg4ndFi6cJVmY8+QrA0VIBb
-rwHPB87fkntsXSlTnztFb7aqH5WYe+6v1S2oolUbvFe5K50MXB0176sj5llUzQl3
-aA64Z0d3M+b5hhCeEbcjpfVaUlQGYuOFOwEQgJdltMPU8gLF5OBBN2Ioa1i6T4XL
-TBBpeWjPKZYzLXzCi9Y/w9b1cNgg367ZW4Ksfrd+sFY8ILUPpmPAg+6VHjnx4s8h
-MyQaFNEAcfJ7m4yfxXDE0NXFyN2seN+uK7j8e30TUCv3PHbLDJjdvAIrxgyuolHd
-T66LygMQJjUyluI9mBZAgm7vsTVLrXIGdGjOi+9zDmKIlNIqd9Cj9EPUzcel3bBu
-U0CLQ1nP3QcvIgH6Cta/K+/Y4XILsfiNwy71kih3Ey+p4qUqiin6qnHv4xe1JgdF
-Y4N/OUd9+zf4ptZyt4AlZiPDHqPg0tAz
+import psutil
+mem = psutil.virtual_memory()
+print mem
+print mem.total,mem.used,mem.free
+
+print psutil.swap_memory()
+
+cpu = psutil.cpu_times()
+print cpu
+
+print psutil.cpu_count()
+print psutil.cpu_count(logical=False)
+
+print psutil.disk_partitions()
+print psutil.disk_usage('/')
+print psutil.disk_io_counters()
+print psutil.disk_io_counters(perdisk=True)
+
+print psutil.net_io_counters()
+
+print psutil.users()
+print psutil.boot_time()
+
+print psutil.pids()
+x=psutil.Process(15421)
+#see the ide tips
+print x.name() 
+
+from subprocess import PIPE
+proc = psutil.Popen(["python","-c","print('hello')"],stdout=PIPE)
+print proc.name()
+
+

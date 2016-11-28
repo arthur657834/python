@@ -1,10 +1,13 @@
-U2FsdGVkX1/8FmCy4EnjtipkrctcqGCfV6bfZ1EoVFFkAXFWm8LIrssJlgO3dICJ
-qtIs6gt9Ve57sIczxpXi/xk6QXy1C0sJQwG1jWDt33FHbp7JVhNUj5ZCDR2E39AI
-QTQTq64hJF6j6A1ILA5CF4A2kCSo5uhTKfNZJvsWpWmDNGXu4Nl2xZc60olu3fRT
-0PRmw9tH24YDkHN+FVVmS8xTy6pu8phfY4t2Tbmj7veGHF3PUeTQgk+FkadT4Drw
-20RgQDFwyvHjiRA2K40K0nCrv8U7OrQyZJNkrz/sOMFX4P4rRCIhRLto/Wpevauv
-RDXcUP1EOLUFxrM5LPBOASIB2lbEWa3RwxjbFGb0x12fOoKiERSVZgaos19jkyyE
-mzi+GBDHHy8PTOXq98Fp6hA+J3+smJjs3cPqteJZiNfuvyE0Egg/qzunM8lg6oYy
-CQSIv9FNCmjAdKWpWRb/SlwLJSbnuF9aggyrshsl+kx9aX5bghJBWudraM7yoPvR
-bcIFTeuScYl4+K3xcN+kmBy7qJ34xviUiPe3EGf8oGqAmA/nEpJIsFQHVBfnOCK2
-h/d0xdf0AOL/nsKyYngbzuVrWsGQvyQT
+import zipfile,os
+
+zfile = zipfile.ZipFile('C:\\Users\\lj\\Desktop\\tmp\\cloudone-all-1.0.0.M1-SNAPSHOT.zip','r')
+for filename in zfile.namelist():
+    print (filename)
+    zfile.extract(filename,'C:\\Users\\lj\\Desktop\\tmp\\')
+
+f = zipfile.ZipFile('e:\\archive.zip','w',zipfile.ZIP_DEFLATED)
+os.getcwd()
+os.chdir('C:\Users\lj\Desktop\mail-tmp')
+f.write('jeecms install.txt')
+f.write('wordpress install.txt')
+f.close()

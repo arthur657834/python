@@ -1,15 +1,20 @@
-U2FsdGVkX1/51gZP+0J8tfyOrfkIkG7sbbYG/va05r4J0UW6I8Go8DswXjy+aCcI
-EP7IFWAgZwzQKnYrYzfjEM8dPW0jIVHV+T+7PIJHB1h//HEYQWmNCb7wlu/bqBAE
-oGIjr6c9GrCb+/L6Va8RQCpNDhTMk2Kbgrpw2lN4Cru8gL+441U/9Zv09G/QlmhE
-Hgmb0/YSmgUMHZ+4Iy3U40Hdn9e0SfloC2QK6SPSsJ2+lrsO1F1C3Gbs2YuuK8jS
-r9WIuCDiHBRThLq1C36P8a/GcBfUiH7qLVyKH888pCmNa2xXhxZ0/bna+W48YExh
-+g3o5uzuXX7DFOSeifqIIKORKDPUrgKc4okjkZQ44wMy+99Y1qQzuyNGsoumPu3I
-oMWaOOjEkXVRYy4uzdv7rAfujAbi9t2RaDZrFzb1rcnoVgrpemipDsjxk+XidJxC
-ksaLq/IgFrQi8pm0fkiPT3VufWfAe2Ezff+ry/40wdNZ8DnLCOCJl4UKBJM7fxb1
-ojJ918Iy9aVoSpWAqxEv9Vwh/EcqsDV5HjhXuOywNBb2sg6OMl6OI5T9FQdGszY1
-mPr0NtmnRVHCwu9UZRRqnE+BufZkZ7PwO6vawK/BZ9C260poUz3Ai1Hb63NlNZio
-U0Q7OKWRdbiknRspRzl07zAKAepe5xnMkrLzGIbGfAng8sUwwkPHQXg6St2+jPK2
-0bCA1DkCw322Sonq0iQdDtSTHOrOItScK0+HcPAT3jlwDumqYbphz0TjknaX0a1G
-WzXR5j50Oc5vbw0UGpA1l/xyiZT8VhwgpjVjOs1w8OD2zKnwi2xwZIoLJnBRobYB
-M9pUIrH68Z3BxFNOCM1ogHOwobWn1Wkva4OhQkPXQpNohSkqlEoVRXWp4G0fPL5a
-Dey8/fHMZyfSmRsQw+RvFYHj5N74WO18NJ6DPjvwgWn2Jw7QqCfnv2emRnTrQ3PQ
+import wmi
+import time
+logfile = 'logs_%s.txt' % time.strftime('%Y-%m-%d_%H-%M-%S', time.localtime())
+def call_remote_bat(ipaddress,username,passwd):
+    try:
+        conn = wmi.WMI(computer=ipaddress,user=username,password=passwd)
+        filename=r"C:\1.bat"   
+        cmd_callbat=r"start %s"%filename
+        conn.Win32_Process.Create(CommandLine=cmd_callbat)  
+        print "successful!"
+        return True
+    except Exception,e:
+        log = open(logfile, 'a')
+        log.write(('%s, call bat Failed!\r\n') % ipaddress)
+        log.close()
+        return False
+    return False
+
+if __name__=='__main__':
+    call_remote_bat("10.1.241.88","administrator","broada@123")

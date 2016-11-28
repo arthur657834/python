@@ -1,19 +1,34 @@
-U2FsdGVkX1/LgmMPrdk942RloNElUrq/9M0hpDZ2XBoy1ewscu528VLvOvftCTIk
-QOUsruzfdsvz2bb30U7K/UdUbZQX4BHik/MGGMtBhRtukCUObpDXD2ngfatQR4o+
-2Tj6r+K52n8VOKsmzr6h3eKiedqsLo2nDlIYccnQdgWUaOrSic+Ma8HC6si0tFao
-ynOUgcUimjx7BVH7s9BtmzVuLY6xLlqlx36tx/kwBG2uXiP4A9QNdZqawtomTUyv
-20UGLq0J2SrcEQ5RWGO99+Hvpxx9NNPqJtDlLoz6wioWrO/iciPdT69p8zUZSR29
-5RQNzonb0tmgcuq09dyD1xeioJtCTwGpDDNjjlmCUeHPKPI/7VUIRTiyVPsKA383
-KYlI8jZFQPAQkv8Qz42EHGzj4pxhqHLWM7VSwPO/hr0qnRNL87yr/TxA7a1qlZb3
-vZiybxDOpotbeFbgJtUgL1QmPu6BBJQhPwhRdNrveYwOxJI99cqwkKWKLxf39B7V
-V/a0kuQNTXNUcpdD1iAmZHj8QN7LSzMkngy3mPaqAdTXx1gS+rEJRTiIkEl/q8OP
-ERQI1FZ4DNFzpnQDNsryULc0s3TdbX57bGzHNL2QMt/z0cfF9We8gTd0HTpKtrDa
-1Kz5VRGVYsKu5pc0icJJOxnuC5rfhQVHdh4L21jRL/1S4EY9299M6t/RwOQbzYCL
-HtfXni9Qqs7eCpLourHTTQTtzCflVAW1btwlVTWKWj1U7GpRMunXaZqcQ8IitjNN
-chpn/in7smV5vtfyz0/3M57i2oUqFL8Zt/Sk6cBWkpyg3H+SdB9KSKwzSeiMhjnA
-6Ot/PovNmzl7A99yCZJawqOyfPabcDcDiFjMfs1JgfF92ERHLwI/32VVjnxAP/t5
-0lj0MFMM0qXp7AtjsR2PkVeYonWVFguC2BwTBxK7bgQHvNGlSWW1aHT2ieLq/P5x
-hSzWyj2jHyd9bRg0SJA2yp6HZF9P1dWt3g6bUCkl0p+MrrLeZ9Kth0mahBlHHX0f
-wF/3DCzp5J/axkYaLYl3Ug7NOpHIUZe3qoMT5e0uhD0dG68yQYdhaFEwLw99kNKF
-jrzeGWwuF/sT9TkzFBJYcsBdqp9bCkRG/cBtSuQ0aPNRmAMAphIS4cDCB0To54zb
-2fBuvDV9qHph43Ntqfo1gG63LZx4A+8V
+import _winreg
+import wmi
+
+key = _winreg.OpenKey(_winreg.HKEY_CURRENT_USER,r"Software\Microsoft\Windows\CurrentVersion\Explorer")
+
+try:
+    i = 0
+    while 1:
+         name, value, type = _winreg.EnumValue(key, i)
+         print repr(name),
+         i +=1
+except WindowsError:
+    print
+    
+print "-------------------"
+
+value, type = _winreg.QueryValueEx(key, "ExplorerStartupTraceRecorded")
+print value, type 
+
+print _winreg.REG_SZ
+
+key = _winreg.OpenKey(_winreg.HKEY_CURRENT_USER,r"Software\Microsoft\Windows\CurrentVersion\Explorer")
+
+newKey = _winreg.CreateKey(key,"MyNewkey")
+ 
+_winreg.SetValue(newKey,"ValueName",_winreg.REG_SZ,"ValueContent")
+
+#delete not work
+_winreg.DeleteKey(key, "MyNewkey")
+
+_winreg.DeleteValue(key, "ValueName")
+
+#remore
+key = _winreg.ConnectRegisty("IP地址或者机器名",_winreg.HKEY_CURRENT_USER)

@@ -1,63 +1,120 @@
-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
-V0O25LUsc7VgmJTTCo0vUA==
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+print "hello,world";
+print "你好，世界";
+
+input("1\n")
+raw_input("2\n")
+
+#string
+str = 'Hello World!'
+print str[2:5]
+print str * 2 # 输出字符串两次
+print str + "TEST" # 输出连接的字符
+
+#list
+list = [ 'abcd', 786 , 2.23, 'john', 70.2 ] #same as string
+#cmp(list1, list2)
+#list.append(obj)
+#同count,extend扩展多值 index insert(index,obj) pop(index) sort pop remove reverse
+
+#tuple
+tuple = ( 'abcd', 786 , 2.23, 'john', 70.2 )#same as string 元组是不允许更新的
+tup1 = (50,)#元组中只包含一个元素时，需要在元素后面添加逗号
+
+#dictionary
+dict = {'name': 'john','code':6734, 'dept': 'sales'}
+print dict['name'] # 输出键为'name' 的值
+print dict.keys() # 输出所有键
+print dict.values() # 输出所有值
+del dict['Name']; # 删除键是'Name'的条目
+dict.clear();     # 清空词典所有条目
+del dict ;        # 删除词典
+seq = ('name', 'age', 'sex')
+dict.fromkeys(seq)#{'age': None, 'name': None, 'sex': None}
+dict.fromkeys(seq, 10)#{'age': 10, 'name': 10, 'sex': 10}
+dict.has_key('name')
+dict.items()
+dict.setdefault(key, default=None)
+dict.update(dict2)#添加另一个字典
+
+#数据类型之间可以相互转换
+
+#运算符
+#//=	取整除赋值运算符
+a=8.2
+b=5.1
+a//b #为1.0
+a/b #为 1.60784313725
+
+#比较对象，但看不出有a==b有什么区别
+if ( a is b ) <=> if ( id(a) == id(b) )
+	
+#if
+num = 5     
+if num == 3:            # 判断num的值
+    print 'boss'        
+elif num == 2:
+    print 'user'
+else:
+    print 'roadman'     # 条件均不成立时输出
+
+#while 居然有else的用法,else在循环正常离开时才会执行 continue break  还有没什么作用的pass
+count = 0
+while count < 5:
+   print count, " is  less than 5"
+   count = count + 1
+else:
+   print count, " is not less than 5"
+
+#for 注意else的位置，跟for配套，目的是防止指数情况的重复输出
+for num in range(10,20):  # 迭代 10 到 20 之间的数字
+   for i in range(2,num): # 根据因子迭代
+      if num%i == 0:      # 确定第一个因子
+         j=num/i          # 计算第二个因子
+         print '%d 等于 %d * %d' % (num,i,j)
+         break            # 跳出当前循环
+   else:                  # 循环的 else 部分
+      print num, '是一个质数'
+
+#以下似乎没什么用
+var1 = 1
+var2 = 10
+del var1, var2
+
+
+#不转义输出 raw
+print r'\n'
+print R'\n'
+print "My name is %s and weight is %d kg!" % ('Zara', 21) #c 语法差不多
+print "%(n)d %(x)s" % {"n":1,"x":"spam"}
+
+#这种定义？什么用，多行？
+errHTML = '''
+<HTML><HEAD><TITLE>
+Friends CGI Demo</TITLE></HEAD>
+</HTML>
+'''
+
+s.replace('x','y',2) //替换前两个x
+
+#写文件
+x=1
+y=2
+z=3
+log=open('log.txt','a')
+print >> log,x,y,z
+
+#组合L1,L2，注意元素个数相对应
+L1=[1,2,3,4]
+L2=[5,6,7,8]
+for (x,y) in zip(L1,L2):
+    print (x,y,x+y)
+
+#偏移量 好像没什么用
+for (offset,item) in enumerate('abc'):
+    print(item,'---',offset)
+
+	
+	
+	

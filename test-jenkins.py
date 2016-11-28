@@ -1,46 +1,49 @@
-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
-ROoD/91FoMvsfLz9j7yG8vOfm2VEXU6f
+#coding=utf8
+ 
+import httplib, urllib, urllib2, xml.dom.minidom, os,time
+from cookielib import CookieJar
+
+def printinfo( url, *vartuple ):
+	resp = urllib2.urlopen(url).read();
+	file_object = open('e://1.xml', 'w+')
+	file_object.write(resp)
+	file_object.close( )
+	
+	DOMTree = xml.dom.minidom.parse("e://1.xml")
+	collection = DOMTree.documentElement
+	for var in vartuple:
+		number=DOMTree.getElementsByTagName(var)
+		n1=number[0].firstChild.data
+		return n1;
+	os.remove("e://1.xml")
+
+cj = CookieJar()
+opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
+urllib2.install_opener(opener);
+
+# second time do url request, the cookiejar will auto handle the cookie
+loginBaiduUrl = "http://10.1.3.89:8080/hudson/j_acegi_security_check";
+postData = urllib.urlencode({"j_username": "test", "j_password": "broadatest", "remember_me": "false", "from": "/hudson/"});
+req = urllib2.Request(loginBaiduUrl, postData); # urllib2.Request: the HTTP request will be a POST instead of a GET when the data parameter is provided.
+req.add_header('Content-Type', 'application/x-www-form-urlencoded');
+req.add_header('Cache-Control', 'no-cache');
+req.add_header('Accept', '*/*');
+req.add_header('Connection', 'Keep-Alive');
+resp = urllib2.urlopen(req);
+respInfo = resp.info();		
+
+createUrl = "http://10.1.3.89:8080/hudson/view/All/createItem"
+#jenkins
+#create_postData=urllib.urlencode({"name": "ljtest", "mode": "hudson.maven.MavenModuleSet", "from": ""})
+#hudson
+create_postData=urllib.urlencode({"name": "ljtest", "mode": "hudson.maven.MavenModuleSet$DescriptorImpl", "from": "","json":'{"name": "ljtest", "mode": "hudson.maven.MavenModuleSet$DescriptorImpl", "from": ""}'})
+									
+req2 = urllib2.Request(createUrl, create_postData); # urllib2.Request: the HTTP request will be a POST instead of a GET when the data parameter is provided.
+req2.add_header('Content-Type', 'application/x-www-form-urlencoded');
+req2.add_header('Cache-Control', 'no-cache');
+req2.add_header('Accept', '*/*');
+req2.add_header('Connection', 'Keep-Alive');
+resp2 = urllib2.urlopen(req2);
+respInfo2 = resp2.info();		
+print respInfo2
+time.sleep(30)

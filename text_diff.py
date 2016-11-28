@@ -1,13 +1,26 @@
-U2FsdGVkX1+Y9bkkuCzvf3yLS7Ommz/QbShMQ6JAr+wRlufGAf2M42IyNcHSwTc1
-+ajGRcOlhk71V4zjnwyoBvyamZtJulhLwm756qhH2gKw7MzaxKIfWrM2YeO6ZaG7
-MnwUNA8MDkp8j6VeV5BdUERk9OJD5zTkSULD0SiLPwEK+xj9su0SW4wfXULmPt4k
-VsViVEoiPGVo1K7a/b4LDSs6EAoEsjJjKpWvx30mQVWurs+kAJDApt1wTOazDOB1
-higrawxFLVI1+dKORv6g40oLHfzmSgkhGsfz0CYpEI+KGIT7mJZJLOgBVshX53Ys
-dM6ozwkgWcM7pebxvyv9dSB+761E8I9ZlaAf58Ddx4nNBrWJATdXeYA4HXA/5nuU
-GCsLmTto3bZAzi9iO5DRV/eFOrADu/YdK1Bh+29bv47TgJsfsmdPcApn9xyuRgIO
-MD1b7dyDURS1uAX4DgXmIJ0GgSR6bsPNZ4BtZjYRLsLqIXpSiwKXv8GQwmgpRXe8
-CheGi+bRF8FGXTqyWZ8gMBqFYcD5PX0jiRALzwZmcusHOptCiG7DfGj/Cd+f+cw/
-Ll9iMHt/y/Oj/K7EZuVcO7i9cHKgq7A0w/rRG+JHnpTCsJ9DOJp33521xzaL5bCy
-tzINsUsTN2FKupBks7oEvqq9aF+1m0u9vRYA4Owt6ox5tggdRy+PnSKrMnRb8jQN
-mFo0JsgmkcOmg1w+6W4afgBOg3aGSi9unZAEELBcz5hrwBYGlFl/dlgYfiIMl4iq
-oJ+GAInmC2VXi2lQblE6UsXB2xmn5dPJ9egDfXFsHmk=
+#!/usr/bin/python
+import difflib
+
+text1 = """text1:
+This module provides classes and functions for comparing sequences.
+including HTML and context and unified diffs.
+difflib document v7.4
+add string
+"""
+
+text1_lines = text1.splitlines()
+
+text2 = """text2:
+This module provides classes and functions for Comparing sequences.
+including HTML and context and unified diffs.
+difflib document v7.5"""
+
+text2_lines = text2.splitlines()
+
+d = difflib.Differ()
+diff = d.compare(text1_lines, text2_lines)
+print '\n'.join(list(diff))
+
+d = difflib.HtmlDiff()
+print d.make_file(text1_lines, text2_lines)
+

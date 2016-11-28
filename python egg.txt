@@ -1,0 +1,40 @@
+ex1:
+vi setup.py
+#-*- coding:utf-8 -*-
+from setuptools import setup
+setup()
+
+python setup.py bdist_egg
+
+ex2:
+from setuptools import setup, find_packages
+
+setup(
+        name = "demo",
+        version="0.1.0",
+        packages = find_packages(),
+        zip_safe = False,
+
+        description = "egg test demo.",
+        long_description = "egg test demo, haha.",
+        author = "amoblin",
+        author_email = "amoblin@ossxp.com",
+
+        license = "GPL",
+        keywords = ("test", "egg"),
+        platforms = "Independant",
+        url = "",
+        )
+		
+vi __init__.py
+
+#-*- coding:utf-8 -*-
+
+def test():
+    print "Hello, I'm amoblin."
+
+if __name__ == '__main__':
+    test()
+		
+卸载egg文件很简单，首先将包含此egg的行从easy-install.pth中删除，然后删除egg文件夹即可。
+

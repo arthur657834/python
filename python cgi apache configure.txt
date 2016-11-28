@@ -1,16 +1,38 @@
-U2FsdGVkX19m+v5sipxdxQKjWqNPN3+xGelu+Hn8Ha8bcygEBQfgs5y78/b18pvV
-moxD6yGjAy6df0srKDwDVwuGY4uEAqm4qPl9ljMXf+5cjvu9T5vwUnSC23Pz9p5A
-u9syDyvseZOAmIaf42MeCmymoejajcUzCNvYJDIW7J3aWMVJBUB+/c6UaoJOWELs
-flvgkNOocfvsuLEJyWcWwfH9YVOe3QEIK6YajH3vKrukLZ9nvre1rWJ+Sxcg2sEi
-NfmSrcakgQVnjqLClnxLeNrkZmDAZ4Glg8P8apXeo47Xvlagbwm/zcNmf9aS4KSc
-xNhHxKAk1yUjskXk12qhqvcZO9oYZkTMQidFjIjXCU66te5tHBgnBRzIgCaxRSAr
-D39BCSAtbBDABUtNgMm01AJOm4GU/5wtWcMBmE/wSBcyhG0iWquP94ftfA/sYaNE
-KkancX27pLhloCoCMK5EzSfYQVRJsBvJUNvfd5JMvqlBt3Nm3nbP0oJ0B7dNa2bA
-FhUKDCS8+JYxSYHi3drCDm4wGQQIzScbww4HVhwxLA+pH5thLpO98qzeaH4jaEHs
-8JcYt01qEkuIDaElxjFIIcAwnRj9+SMH+/wE9+1MGkOwKCVNTsNpasU5McmvG6G1
-+O7XnJ2Jwx7u/317cRS9p+1X/JLHHUk9FSKXMWHEeVXeGmauHD6CyHaMGzuePgFC
-cRow28epqFjHZdmjiSeDxQ/JnRgZDSg1ZR+Qb22NHG9YQiVvDm8/1+6q8uVchJ04
-3GgS6/LlKpPu/0Y16qOtdmLv75suAAN+RWag/xl+9e1UV6jeN/sfFMagi5lyn1RK
-PDJjjMPP0iKHX+N7M0ZeP4gmrDZp8oQm0mlbRmJZb6hZBBO3sK8kNvaBJFOZ6gdX
-9XmaLwD9yG6eZRyyNwLU0TMUtmzu8bwxfEosgoY04Foepq9mRPXiQ+8POkysXmre
-kkTL9mKkaFH5hmbN3J0at2ewOjxqlyYfASBJ1H7Cu1g=
+设置好CGI目录：
+
+ScriptAlias /cgi-bin/ "F:/web/cgi-bin/"
+
+配置如下：
+
+<Directory "F:/web/cgi-bin">
+    AllowOverride None
+    Options FollowSymLinks +ExecCGI
+    Order allow,deny
+    Allow from all
+</Directory>
+
+添加CGI扩展名：（去掉注释）
+
+AddHandler cgi-script .cgi
+
+http://10.1.51.124/cgi-bin/hello.py
+
+hello.py
+import cgi
+import cgitb;
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+
+#import cgi
+#import cgitb;
+#cgitb.enable()
+
+print "Content-type:text/html\r\n\r\n"
+print '<html>'
+print '<head>'
+print '<title>Hello Word - First CGI Program</title>'
+print '</head>'
+print '<body>'
+print '<h2>Hello Word! This is my first CGI program</h2>'
+print '</body>'
+print '</html>'
