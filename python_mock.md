@@ -11,15 +11,15 @@ Mock对象的一般用法是这样的：
 之后就可以开始写测试代码，这个时候我们可以保证我们替换掉的对象在测试用例执行的过程中行为和我们预设的一样。
 
 module.py:
-'''python
+```python
 class Count():
 
     def add(self, a, b):
         return a + b
-'''
+```
 
 mock_demo.py:
-'''python
+```python
 from unittest import mock
 import unittest
 from module import Count
@@ -37,7 +37,7 @@ class MockDemo(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-'''
+```
 
 count.add = mock.Mock(return_value=13, side_effect=count.add)
 
@@ -47,7 +47,7 @@ count.add.assert_called_with(8, 8)
 检查mock方法是否获得了正确的参数。
 
 function.py:
-'''python
+```python
 def add_and_multiply(x, y):
     addition = x + y
     multiple = multiply(x, y)
@@ -56,10 +56,10 @@ def add_and_multiply(x, y):
 
 def multiply(x, y):
     return x * y
-'''
+```
 
 func_test.py:
-'''python
+```python
 import unittest
 from unittest.mock import patch
 import function
@@ -81,7 +81,7 @@ class MyTestCase(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-'''
+```
 
 @patch("function.multiply")
 patch()装饰/上下文管理器可以很容易地模拟类或对象在模块测试。在测试过程中，您指定的对象将被替换为一个模拟（或其他对象），并在测试结束时还原。
