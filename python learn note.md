@@ -172,7 +172,7 @@ print 5.5/2  ==> 2.75
 print 5.5//2 ==> 2.0
 
 DocStrings:
-
+```python
 #!/usr/bin/python
 # Filename: func_doc.py
 
@@ -190,7 +190,7 @@ def printMax(x, y):
 
 printMax(3, 5)
 print printMax.__doc__
-
+```
 $ python func_doc.py
 5 is maximum
 Prints the maximum of two numbers.
@@ -203,3 +203,32 @@ Prints the maximum of two numbers.
     The two values must be integers.'''
 	
 python 有对接jira的库
+
+tip1:
+python xxx.py
+python -m xxx.py
+1、叫做直接运行
+2、相当于import,叫做当做模块来启动
+不同的加载py文件的方式，主要是影响——sys.path 这个属性。sys.path 就相当于liunx中的PATH。
+测试文件:
+
+```python
+import sys
+sys.path
+```
+
+直接启动是把run.py文件，所在的目录放到了sys.path属性中。
+模块启动是把你输入命令的目录（也就是当前路径），放到了sys.path属性中***
+
+可以分析代码使用
+```shell
+python -m dis 1.py
+```
+
+ex1:
+s=[1,2,3,4,5,6]
+i=0
+i=s[i]=3
+
+i=3
+s=[1,2,3,3,5,6]
