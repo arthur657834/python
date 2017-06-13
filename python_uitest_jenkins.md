@@ -51,5 +51,7 @@ sonar.python.coverage.reportPath=coverage.xml
 sonar.python.coveragePlugin=cobertura
 ```
 
+jenkins 安装插件Cobertura Plugin
+
 ![jenkins](./exmaple.jpg)
 
