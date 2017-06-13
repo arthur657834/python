@@ -1,13 +1,20 @@
 ex1 测试模块中的函数 :
+```shell
 vi myclass.py
+```
+```python
 #!/usr/bin/env python
 #encoding: utf-8
 def sum( x, y):
     return x+y
 def sub( x, y):
     return x-y
-    
+```
+
+```shell
 vi mytest.py
+```
+```python
 #!/usr/bin/env python
 #encoding: utf-8
 import unittest
@@ -26,9 +33,13 @@ class mytest(unittest.TestCase):
     self.assertEqual(myclass.sub(2, 1), 1, 'test sub fail')
 if __name__ =='__main__':
   unittest.main()    
+```
 
 ex2 测试模块类中的函数:
+```shell
 vi myclass1.py
+```
+```python
 #!/usr/bin/env python
 #encoding: utf-8
 class myclass:
@@ -38,8 +49,11 @@ class myclass:
     return x+y
   def sub(self, x, y):
     return x-y
-
+```
+```shell
 vi mytest1.py
+```
+```python
 #!/usr/bin/env python 
 #encoding: utf-8 
 import unittest 
@@ -57,6 +71,7 @@ class mytest(unittest.TestCase):
     self.assertEqual(self.tclass.sum(1, 2), 3) 
 if __name__ =='__main__': 
   unittest.main()    
+```  
   
 
 
