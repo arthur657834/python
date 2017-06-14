@@ -204,6 +204,66 @@ Prints the maximum of two numbers.
 	
 python 有对接jira的库
 
+distribute是setuptools的替代方案，pip是easy_install的替代方案
+
+Distribute提供一个安装python模块的框架
+
+pip install distribute
+
+--distribute 选项使virtualenv使用新的基于发行版的包管理系统而不是 setuptools 获得的包。 你现在需要知道的就是 --distribute 选项会自动在新的虚拟环境中安装 pip
+
+export VIRTUALENV_USE_DISTRIBUTE=true python版本兼容设置
+PIP_DOWNLOAD_CACHE=/root/.pip-cache tip:如无法接入internet也会安装失败
+
+
+
+pip install nose coverage
+
+Mercurial plugin
+Cobertura Plugin
+Task Scanner Plug-in
+
+
+nosetests --where . --with-xunit --xunit-file=nosetests.xml
+
+nosetests --with-xunit --with-coverage && coverage xml
+
+
+
+pip freeze > requirement.txt
+pip install -r requirement.txt
+
+pip bundle -r requirement.txt ljtest.pybundle
+pip install ljtest.pybundle
+
+
+pip install mercurial
+mercurial 跟git相似
+
+pip install pep8 pyflakes
+pep8 编码风格检测
+pyflakes 语法检测
+pep8/pyflakes 1.py
+
+
+python -m zipfile -e 1.zip 
+
+
+pip install trac
+trac-admin ljtest initenv
+tracd -s --port 8000 ljtest
+
+htpasswd -c ljtest/trac.htpasswd admin
+htpasswd  ljtest/trac.htpasswd king
+
+tracd -s --port 8000 --basic-auth="ljtest,ljtest/trac.htpasswd,Ljtest" ljtest
+工程路径 密码文件路径 工作域名
+
+ticket
+
+
+https://www.dropbox.com/
+
 tip1:
 python xxx.py
 python -m xxx.py
