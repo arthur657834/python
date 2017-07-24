@@ -5,10 +5,12 @@ test:
 	a.py
 
 a.py:
+```python
 import dir.b
 print dir.b.name
-
+```
 import 上级目录:
+```
 import sys
 sys.path.append("..")
 import mod1
@@ -17,7 +19,7 @@ import mod1
 from home.a.b import *   前提 home、a中都包括__init__.py
 
 sys.path.append("/home/a/")
-
+```
 
 
 
