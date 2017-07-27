@@ -53,4 +53,14 @@ import pyximport; pyximport.install()
 自 Cython 0.11 起，pyximport 模块同样实验性地支持普通 Python 模块的编译了。它允许你在所有 Python import 的 .pyx 和 .py 模块上自动运行 Cython，包括哪些标准库和第三方库。但是，任然有不少 Python 模块 Cython 无法编译，遇到这种情况 import 机制（mechanism）会退回去读取 Python 原模块。.py 的 import 机制可按如下方式安装：
 >>> pyximport.install(pyimport = True)
 
+cython -a compute.py
+生成html展示转化过程
+
+cython
+
+限制：
+生成器表达式
+对比char*常量
+元组作为函数参数（python3已不支持）
+
 
