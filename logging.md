@@ -1,3 +1,4 @@
+ex1:
 ```python
 import logging
 logging.basicConfig(level=logging.INFO)
@@ -13,7 +14,7 @@ logger.info('Updating records ...')
  
 logger.info('Finish updating records')
 ```
-
+ex2:
 ```python
 import logging
  
@@ -36,7 +37,7 @@ logger.addHandler(handler)
  
 logger.info('Hello baby')
 ```
-
+ex3:
 ```python
 import logging
 import logging.config
@@ -204,7 +205,7 @@ root:
  
     handlers: [console, info_file_handler, error_file_handler]
 ```
-
+ex4:
 ```python
 import json
 import logging.config
@@ -224,7 +225,7 @@ def setup_logging(
     if os.path.exists(path):
         with open(path, 'rt') as f:
             config = json.load(f)
-            \\config = yaml.load(f.read())
+            #config = yaml.load(f.read())
         logging.config.dictConfig(config)
     else:
         logging.basicConfig(level=default_level)
