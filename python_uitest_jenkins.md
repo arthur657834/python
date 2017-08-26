@@ -1,5 +1,5 @@
 ```shell
-pip install nosetest coverage unittest-xml-reporting
+pip install nose coverage unittest-xml-reporting
 ```
 
 foo.py:
