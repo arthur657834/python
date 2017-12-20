@@ -1,8 +1,9 @@
 http://www.ibm.com/developerworks/cn/linux/l-cn-pythondebugger/
+```
 指定编码
 # -*- coding: cp-1252 -*-
 # -*- coding:utf-8 -*- 
-
+```
 标识符
 第一个字符必须是字母表中字母或下划线'_'
 在Python 3中，非-ASCII 标识符也是允许的了。
