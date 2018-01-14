@@ -4,6 +4,7 @@ http://www.ibm.com/developerworks/cn/linux/l-cn-pythondebugger/
 # -*- coding: cp-1252 -*-
 # -*- coding:utf-8 -*- 
 ```
+```
 标识符
 第一个字符必须是字母表中字母或下划线'_'
 在Python 3中，非-ASCII 标识符也是允许的了。
@@ -11,35 +12,40 @@ http://www.ibm.com/developerworks/cn/linux/l-cn-pythondebugger/
 python保留字
 import keyword
 keyword.kwlist
+```
 
-字符串
-	python中单引号和双引号使用完全相同。
-	使用三引号('''或""")可以指定一个多行字符串。
-	转义符 '\'
-	自然字符串， 通过在字符串前加r或R。 如 r"this is a line with \n" 则\n会显示，并不是换行。
-	python允许处理unicode字符串，加前缀u或U， 如 u"this is an unicode string"。
-	字符串是不可变的。
-	按字面意义级联字符串，如"this " "is " "string"会被自动转换为this is string。
+### 字符串
+```
+python中单引号和双引号使用完全相同。
+使用三引号('''或""")可以指定一个多行字符串。
+转义符 '\'
+自然字符串， 通过在字符串前加r或R。 如 r"this is a line with \n" 则\n会显示，并不是换行。
+python允许处理unicode字符串，加前缀u或U， 如 u"this is an unicode string"。
+字符串是不可变的。
+按字面意义级联字符串，如"this " "is " "string"会被自动转换为this is string。
+s = 'Yes,he doesn\'t'
+print(s, type(s), len(s))
+print(word[0], word[-5])  word[1:5] word[5:]
+print('my'*3) =>mymymy
+print("""\ \的作用是避免在最开始产生一个不需要的空行
+	Usage: thingy [OPTIONS]
+	-h                        Display this usage message
+	-H hostname               Hostname to connect to
+""")
+```
 
-	s = 'Yes,he doesn\'t'
-	print(s, type(s), len(s))
-	print(word[0], word[-5])  word[1:5] word[5:]
-	print('my'*3) =>mymymy
-	print("""\ \的作用是避免在最开始产生一个不需要的空行
-		Usage: thingy [OPTIONS]
-		-h                        Display this usage message
-		-H hostname               Hostname to connect to
-	""")
+### Numbers
+```
+a, b, c, d = 20, 5.5, True, 4+3j
+```
 
-Numbers
-	a, b, c, d = 20, 5.5, True, 4+3j
-
-List（列表）
-	a = ['him', 25, 100, 'her']
-	a + [6, 7, 8]
-	a[2:5] = []  # 删除
-	cubes.append(216)
-	del a[2:4]
+### List（列表）
+```
+a = ['him', 25, 100, 'her']
+a + [6, 7, 8]
+a[2:5] = []  # 删除
+cubes.append(216)
+del a[2:4]
 	
 list.append(x)	把一个元素添加到列表的结尾，相当于 a[len(a):] = [x]。
 list.extend(L)	通过添加指定列表的所有元素来扩充列表，相当于 a[len(a):] = L。
@@ -52,37 +58,44 @@ list.count(x)	返回 x 在列表中出现的次数。
 list.sort()	对列表中的元素进行排序。
 list.reverse()	倒排列表中的元素。
 list.copy()	返回列表的浅复制，等于a[:]。
-	
-Tuple（元组）
-	a = (1991, 2014, 'physics', 'math')
-	构造包含0个或1个元素的tuple是个特殊的问题，所以有一些额外的语法规则：
-	tup1 = () # 空元组
-	tup2 = (20,) # 一个元素，需要在元素后添加逗号
-	tup1+tup2
+```
 
-Sets（集合）
-	student = {'Tom', 'Jim', 'Mary', 'Tom', 'Jack', 'Rose'}
-	'Rose' in student  # membership testing（成员测试） =>true
-	a = set('abracadabra')
-	b = set('alacazam')
-	a-b # a和b的差集
-	a | b # a和b的并集
-	a & b     # a和b的交集
-	a ^ b     # a和b中不同时存在的元素
+### Tuple（元组）
+```
+a = (1991, 2014, 'physics', 'math')
+构造包含0个或1个元素的tuple是个特殊的问题，所以有一些额外的语法规则：
+tup1 = () # 空元组
+tup2 = (20,) # 一个元素，需要在元素后添加逗号
+tup1+tup2
+```
 
-Dictionaries（字典）
-	tel = {'Jack':1557, 'Tom':1320, 'Rose':1886}
-	dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])
-	{x: x**2 for x in (2, 4, 6)}
-	dict(sape=4139, guido=4127, jack=4098)
-	tel['Jack']
-	del tel['Rose']
-	tel['Mary'] = 4127
-	list(tel.keys())
-	sorted(tel.keys()
-	'Mary' not in tel  # 成员测试
-	for k, v in knights.items():
-	
+### Sets（集合）
+```
+student = {'Tom', 'Jim', 'Mary', 'Tom', 'Jack', 'Rose'}
+'Rose' in student  # membership testing（成员测试） =>true
+a = set('abracadabra')
+b = set('alacazam')
+a-b # a和b的差集
+a | b # a和b的并集
+a & b     # a和b的交集
+a ^ b     # a和b中不同时存在的元素
+```
+
+### Dictionaries（字典）
+```
+tel = {'Jack':1557, 'Tom':1320, 'Rose':1886}
+dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])
+{x: x**2 for x in (2, 4, 6)}
+dict(sape=4139, guido=4127, jack=4098)
+tel['Jack']
+del tel['Rose']
+tel['Mary'] = 4127
+list(tel.keys())
+sorted(tel.keys()
+'Mary' not in tel  # 成员测试
+for k, v in knights.items():
+```
+
 第一行如下,可像shell 一下执行 ./hello.py
 #! /usr/bin/env python3.4	
 
