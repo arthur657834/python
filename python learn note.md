@@ -103,6 +103,7 @@ round(113.0625, 2)  113.06
 在交互模式中，最后被输出的表达式结果被赋值给变量 _ 
 
 基础：
+```python
 age = int(input("Age of the dog: "))
 
 if condition_1:
@@ -129,26 +130,32 @@ while True:
 def return_sum(x,y):
     c = x + y
     return c
+```
 
-判断是否为主模块	
+判断是否为主模块
+```
 if __name__ == '__main__':
 	print('程序自身在运行')
+```
 
 导入子模块
+```python
 import sound.effects.echo
 from sound.effects import echo	
-	
-str() 函数返回一个用户易读的表达形式。
-repr() 产生一个解释器易读的表达形式。
-rjust() 可以将字符串靠右, 并在左边填充空格。<=>ljust() 和 center()
-zfill() 在数字的左边填充 0
+```
+
+str() 函数返回一个用户易读的表达形式。<br>
+repr() 产生一个解释器易读的表达形式。<br>
+rjust() 可以将字符串靠右, 并在左边填充空格。<=>ljust() 和 center()<br>
+zfill() 在数字的左边填充 0<br>
 
 str.format()
 ex.   
+```python
 print('We are the {} who say "{}!"'.format('knights', 'Ni'))
 print('{0} and {1}'.format('spam', 'eggs'))
 print('This {food} is {adjective}.'.format(food='spam', adjective='absolutely horrible'))
-
+```
 
 reload
 
@@ -189,7 +196,9 @@ DocStrings:
 ```python
 #!/usr/bin/python
 # Filename: func_doc.py
-
+# Date：2011-09-07 
+# Author：Chris
+ 
 def printMax(x, y):
     '''Prints the maximum of two numbers.
 
