@@ -3,6 +3,11 @@ http://www.ibm.com/developerworks/cn/linux/l-cn-pythondebugger/
 指定编码
 # -*- coding: cp-1252 -*-
 # -*- coding:utf-8 -*- 
+
+这句是告诉python程序中的文本是utf-8编码，让python可以按照utf-8读取程
+字符串前面加r，表示的意思是禁止字符串转义
+中文前加u就是告诉python后面的是个unicode编码，存储时按unicode格式存储。
+
 ```
 ```
 标识符
@@ -96,11 +101,16 @@ sorted(tel.keys()
 for k, v in knights.items():
 ```
 
+Tips:
+```
 第一行如下,可像shell 一下执行 ./hello.py
 #! /usr/bin/env python3.4	
 
+
 round(113.0625, 2)  113.06
+
 在交互模式中，最后被输出的表达式结果被赋值给变量 _ 
+```
 
 基础：
 ```python
