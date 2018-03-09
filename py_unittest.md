@@ -1,3 +1,5 @@
+python -m unittest mydict_test
+
 ex1 测试模块中的函数 :
 ```shell
 vi myclass.py
